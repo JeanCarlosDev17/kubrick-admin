@@ -30,9 +30,6 @@
     "/api/users": {
       "post": {
         "summary": "Crear Cliente",
-        "tags": [
-          "Admin Clientes"
-        ],
         "responses": {
           "201": {
             "description": "Created",
@@ -423,15 +420,15 @@
             }
           }
         },
-        "description": "Este servicio permite crear los accesos a la api de usuarios y deinir los parametros  requeridos por el cliente  para el uso del api segun sus necesidades,  parametros como como los accesos y tenant de rest, accesos y tenant de micrositios, configuración de bines para la creación individual de comercios, sucursal y token en ThreeDS\n\nComo resultado nos brinda un bearer token que permite tener acceso a los diferentes endpoints de la aplicación\n\n**Añadir rest tenant a un cliente api**  \n\nExisten 2 maneras posibles de añadirle una configuración de tenant de rest, ademas que es obliatorio usar alguno de estos 2, el primero es añadirle un tenant ya existente con un tenantId y la segunda forma es añadirle el objeto de tenan para crear un nuevo tenant con las configuraciones requeridas, se debe utilizar una de las 2 formas pero no las 2 al mismo tiempo \n\n**Añadir microsite tenant a un cliente api ** \n\nAñadir un microsite tenant es necesario para poder crear micrositios, es importante recordar que los micrositios tienen una relación directa con rest y que los sitios a los cuales mediante su id vamos a relacionar un micrositio, existan y sea el correspondiente al mismo tenant es decir debemos estar seguros que la url del tenant de micrositio es la que mantenie una relacion con el tenant de rest que configuramos, Podemos añadir un microsite tenant que ya existe mediante el micrositeTenantId y tambien añadiendo el objeto micrositeTenant para craer un nuevo micrositeTenant con la configuración requerida\n\n**Añadir bins a un cliente api  **\n\nEsta configuración es requerida para que el cliente pueda el crear comercios de ThreeDs de manera independiente a una integración"
+        "description": "Este servicio permite crear los accesos a la api de usuarios y deinir los parametros  requeridos por el cliente  para el uso del api segun sus necesidades,  parametros como como los accesos y tenant de rest, accesos y tenant de micrositios, configuración de bines para la creación individual de comercios, sucursal y token en ThreeDS\n\nComo resultado nos brinda un bearer token que permite tener acceso a los diferentes endpoints de la aplicación\n\n**Añadir rest tenant a un cliente api**  \n\nExisten 2 maneras posibles de añadirle una configuración de tenant de rest, ademas que es obliatorio usar alguno de estos 2, el primero es añadirle un tenant ya existente con un tenantId y la segunda forma es añadirle el objeto de tenan para crear un nuevo tenant con las configuraciones requeridas, se debe utilizar una de las 2 formas pero no las 2 al mismo tiempo \n\n**Añadir microsite tenant a un cliente api ** \n\nAñadir un microsite tenant es necesario para poder crear micrositios, es importante recordar que los micrositios tienen una relación directa con rest y que los sitios a los cuales mediante su id vamos a relacionar un micrositio, existan y sea el correspondiente al mismo tenant es decir debemos estar seguros que la url del tenant de micrositio es la que mantenie una relacion con el tenant de rest que configuramos, Podemos añadir un microsite tenant que ya existe mediante el micrositeTenantId y tambien añadiendo el objeto micrositeTenant para craer un nuevo micrositeTenant con la configuración requerida\n\n**Añadir bins a un cliente api  **\n\nEsta configuración es requerida para que el cliente pueda el crear comercios de ThreeDs de manera independiente a una integración",
+        "tags": [
+          "Clientes"
+        ]
       }
     },
     "/api/users/all": {
       "post": {
         "summary": "Listar Clientes Api",
-        "tags": [
-          "Admin Clientes"
-        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -652,15 +649,15 @@
           },
           "description": ""
         },
-        "description": "Este servicio permite ver los clientes api creados"
+        "description": "Este servicio permite ver los clientes api creados",
+        "tags": [
+          "Clientes"
+        ]
       }
     },
     "/api/users/{user}": {
       "post": {
         "summary": "Buscar Cliente",
-        "tags": [
-          "Admin Clientes"
-        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -864,7 +861,10 @@
             }
           }
         },
-        "description": "Permite buscar ver la información y configuraciones de un cliente api "
+        "description": "Permite buscar ver la información y configuraciones de un cliente api ",
+        "tags": [
+          "Clientes"
+        ]
       },
       "parameters": [
         {
@@ -879,9 +879,6 @@
       ],
       "delete": {
         "summary": "Eliminar Cliente",
-        "tags": [
-          "Admin Clientes"
-        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -1016,13 +1013,13 @@
               }
             }
           }
-        }
+        },
+        "tags": [
+          "Clientes"
+        ]
       },
       "put": {
         "summary": "Actualizar Cliente",
-        "tags": [
-          "Admin Clientes"
-        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -1384,7 +1381,10 @@
               }
             }
           }
-        }
+        },
+        "tags": [
+          "Clientes"
+        ]
       }
     },
     "/api/users/renew-token/{user}": {
@@ -1598,10 +1598,10 @@
             }
           }
         },
+        "description": "Permite revocar el antiguo token y crear un nuevo token de acceso a un cliente api",
         "tags": [
-          "Admin Clientes"
-        ],
-        "description": "Permite revocar el antiguo token y crear un nuevo token de acceso a un cliente api"
+          "Clientes"
+        ]
       },
       "parameters": [
         {
