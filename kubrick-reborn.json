@@ -1617,7 +1617,7 @@
     },
     "/api/subscriptions/{subscription}": {
       "put": {
-        "summary": "Actualizar",
+        "summary": "Actualizar subscription",
         "responses": {
           "200": {
             "description": "OK",
@@ -1877,11 +1877,11 @@
         },
         "description": "Este servicio permite actualizar la información de una suscripción ",
         "tags": [
-          "Admin Subscriptions"
+          "Subscriptions"
         ]
       },
       "delete": {
-        "summary": "Eliminar",
+        "summary": "Eliminar subscription",
         "responses": {
           "200": {
             "description": "OK",
@@ -2074,7 +2074,7 @@
         },
         "description": "Este servicio permite elimiar una suscripción",
         "tags": [
-          "Admin Subscriptions"
+          "Subscriptions"
         ]
       },
       "parameters": [
@@ -2088,7 +2088,7 @@
         }
       ],
       "post": {
-        "summary": "Buscar",
+        "summary": "Buscar subscription",
         "responses": {
           "200": {
             "description": "OK",
@@ -2213,15 +2213,15 @@
             }
           }
         },
+        "description": "Este servicio nos permite buscar la configuración de una suscripción",
         "tags": [
-          "Admin Subscriptions"
-        ],
-        "description": "Este servicio nos permite buscar la configuración de una suscripción"
+          "Subscription"
+        ]
       }
     },
     "/api/subscriptions": {
       "post": {
-        "summary": "Crear",
+        "summary": "Crear subscription",
         "responses": {
           "201": {
             "description": "Created",
@@ -2414,10 +2414,7 @@
               }
             }
           }
-        },
-        "tags": [
-          "Admin Subscriptions"
-        ]
+        }
       },
       "parameters": []
     },
@@ -7127,7 +7124,7 @@
     },
     "/api/subscriptions/all": {
       "post": {
-        "summary": "Listar",
+        "summary": "Listar subscription",
         "responses": {
           "200": {
             "description": "OK",
@@ -7222,7 +7219,7 @@
           }
         },
         "tags": [
-          "Admin Subscriptions"
+          "Subscription"
         ]
       },
       "parameters": []
