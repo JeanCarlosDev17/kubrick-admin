@@ -1617,7 +1617,7 @@
     },
     "/api/subscriptions/{subscription}": {
       "put": {
-        "summary": "Actualizar subscription",
+        "summary": "Actualizar suscripción",
         "responses": {
           "200": {
             "description": "OK",
@@ -1875,13 +1875,13 @@
           },
           "description": "Este servicio nos permite modificar la configuración de una suscripción"
         },
-        "description": "Este servicio permite actualizar la información de una suscripción ",
+        "description": "Este servicio permite actualizar la información de una suscripción",
         "tags": [
-          "Subscriptions"
+          "Suscripciones"
         ]
       },
       "delete": {
-        "summary": "Eliminar subscription",
+        "summary": "Eliminar suscripción",
         "responses": {
           "200": {
             "description": "OK",
@@ -2074,7 +2074,7 @@
         },
         "description": "Este servicio permite elimiar una suscripción",
         "tags": [
-          "Subscriptions"
+          "Suscripciones"
         ]
       },
       "parameters": [
@@ -2088,7 +2088,7 @@
         }
       ],
       "post": {
-        "summary": "Buscar subscription",
+        "summary": "Buscar suscripción",
         "responses": {
           "200": {
             "description": "OK",
@@ -2215,13 +2215,13 @@
         },
         "description": "Este servicio nos permite buscar la configuración de una suscripción",
         "tags": [
-          "Subscription"
+          "Suscripciones"
         ]
       }
     },
     "/api/subscriptions": {
       "post": {
-        "summary": "Crear subscription",
+        "summary": "Crear suscripción",
         "responses": {
           "201": {
             "description": "Created",
@@ -2414,7 +2414,10 @@
               }
             }
           }
-        }
+        },
+        "tags": [
+          "Suscripciones"
+        ]
       },
       "parameters": []
     },
@@ -7124,7 +7127,7 @@
     },
     "/api/subscriptions/all": {
       "post": {
-        "summary": "Listar subscription",
+        "summary": "Listar suscripción",
         "responses": {
           "200": {
             "description": "OK",
@@ -7219,7 +7222,7 @@
           }
         },
         "tags": [
-          "Subscription"
+          "Suscripciones"
         ]
       },
       "parameters": []
