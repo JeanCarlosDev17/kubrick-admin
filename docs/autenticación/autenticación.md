@@ -5,12 +5,11 @@ tags: [autenticación]
 
 # Autenticación
 
-La autenticación es por medio de un bearer token enviado en el header “Authorization”, el token es generado por los administradores de la API. A continuación se mostrarán los headers recomendados:
+La autenticación se envía en cada request que se hace a la API, enviando un objeto llamado "auth", el cual, contiene "email" y "password", tal como se muestra en el siguiente ejemplo:
 
-| Name          | Required | Description                       |
-| ------------- | -------- | --------------------------------- |
-| Authorization | YES      | Bearer eYjdsjwpdm92j3k2j313j2m... |
-| Content-type  | YES      | application/json                  |
-| Accept        | YES      | application/json                  |
-
-Se recomienda que el token no esté expuesto en el código, se debe recuperar desde un archivo de variables de entorno o en caso de almacenarse en la base de datos debe estar encriptado.
+```json
+"auth": {
+  "email": "admin@kubrick.com",
+  "password": "Password.secure.6"
+}
+```
