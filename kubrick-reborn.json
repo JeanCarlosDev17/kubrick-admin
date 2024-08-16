@@ -5758,10 +5758,7 @@
     },
     "/api/microsite-tenants/all": {
       "post": {
-        "summary": "Listar micrositeTenants",
-        "tags": [
-          "Admin micrositeTenant"
-        ],
+        "summary": "Listar Tenant micrositios",
         "responses": {
           "200": {
             "description": "OK",
@@ -5958,15 +5955,15 @@
             }
           }
         },
-        "description": "Este servicio permite listar las configuraciones de los micrositeTenant creados"
+        "description": "Este servicio permite listar las configuraciones de los micrositeTenant creados",
+        "tags": [
+          "Tenants Micrositios"
+        ]
       }
     },
     "/api/microsite-tenants": {
       "post": {
-        "summary": "Crear micrositeTenant",
-        "tags": [
-          "Admin micrositeTenant"
-        ],
+        "summary": "Crear tenants micrositios",
         "responses": {
           "201": {
             "description": "Created",
@@ -6219,7 +6216,10 @@
           },
           "description": ""
         },
-        "description": "Este servicio permite añadir la configuración de los tenants para la creacion de micrositios. Se debe tener en cuenta que la \"baseUrl\" hace referencia al tenant en el servicio de Micrositios."
+        "description": "Este servicio permite añadir la configuración de los tenants para la creacion de micrositios. Se debe tener en cuenta que la \"baseUrl\" hace referencia al tenant en el servicio de Micrositios.",
+        "tags": [
+          "Tenants Micrositios"
+        ]
       }
     },
     "/api/micorsite-tenants/{micrositeTenant}": {
@@ -6235,10 +6235,7 @@
         }
       ],
       "post": {
-        "summary": "Buscar MicrositeTenant",
-        "tags": [
-          "Admin micrositeTenant"
-        ],
+        "summary": "Buscar tenants micrositios",
         "responses": {
           "200": {
             "description": "OK",
@@ -6465,13 +6462,13 @@
               }
             }
           }
-        }
+        },
+        "tags": [
+          "Tenants Micrositios"
+        ]
       },
       "put": {
-        "summary": "Actualizar micrositeTenant",
-        "tags": [
-          "Admin micrositeTenant"
-        ],
+        "summary": "Actualizar tenants micrositios",
         "responses": {
           "200": {
             "description": "OK",
@@ -6743,13 +6740,13 @@
             "description": "application/json"
           }
         ],
-        "description": "Este servicio permite actualizar un tenant de micrositios existente."
+        "description": "Este servicio permite actualizar un tenant de micrositios existente.",
+        "tags": [
+          "Tenants Micrositios"
+        ]
       },
       "delete": {
-        "summary": "Eliminar micrositeTenant",
-        "tags": [
-          "Admin micrositeTenant"
-        ],
+        "summary": "Eliminar tenants micrositios",
         "responses": {
           "200": {
             "description": "OK",
@@ -6959,7 +6956,10 @@
             }
           }
         },
-        "description": "Este servicio permite eliminar un micrositeTenant existente"
+        "description": "Este servicio permite eliminar un micrositeTenant existente",
+        "tags": [
+          "Tenants Micrositios"
+        ]
       }
     },
     "/api/tenants/all": {
