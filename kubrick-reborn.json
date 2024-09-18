@@ -370,11 +370,27 @@
                         "id": "850y5od9qc4er"
                       }
                     }
+                  },
+                  "restUserGroupsSettings": {
+                    "type": "array",
+                    "x-stoplight": {
+                      "id": "mk6ko9mg8609f"
+                    },
+                    "description": "Configuraciones de grupos utilizados que seran asignados a los usuarios en panel por parte del cliente api",
+                    "minItems": 1,
+                    "items": {
+                      "x-stoplight": {
+                        "id": "9vn58jfxjmtht"
+                      },
+                      "type": "string",
+                      "maxLength": 100,
+                      "example": "userGroupClient"
+                    }
                   }
                 }
               },
               "examples": {
-                "Example 1": {
+                "Example 2": {
                   "value": {
                     "auth": {
                       "email": "test@admin.com",
@@ -384,10 +400,11 @@
                     "email": "pagosex@email.com",
                     "country": "CO",
                     "language": "ES",
-                    "currency": "COP",
+                    "currency": "ARS",
                     "status": true,
                     "seller": 9,
                     "reseller": 12,
+                    "tenantId": 1,
                     "tenant": {
                       "name": "CHpay tenant",
                       "description": "Tenant de CHpay ",
@@ -398,6 +415,7 @@
                       "testLogin": "myTestLogin",
                       "testSecretKey": "myTestSecretHash"
                     },
+                    "micrositeTenantId": 1,
                     "micrositeTenant": {
                       "name": "CHpay tenant",
                       "description": "Tenant de CHpay ",
@@ -408,11 +426,14 @@
                       "testLogin": "myTestLogin",
                       "testSecretKey": "myTestSecretHash"
                     },
-                    "bins": [
+                    "subscriptions": [
                       {
                         "franchise": 2,
                         "acquirerBIN": 400900
                       }
+                    ],
+                    "restUserGroupsSettings": [
+                      "userGroupClient"
                     ]
                   }
                 }
@@ -1356,11 +1377,25 @@
                     },
                     "description": "Id de la configuración del tenant de micrositios, es necesario si el cliente requiere crear micrositios",
                     "example": 1
+                  },
+                  "restUserGroupsSettings": {
+                    "type": "array",
+                    "x-stoplight": {
+                      "id": "mmil1vsfsfrrm"
+                    },
+                    "minItems": 1,
+                    "items": {
+                      "x-stoplight": {
+                        "id": "6nfzvgzm9394b"
+                      },
+                      "type": "string",
+                      "example": "update_grou"
+                    }
                   }
                 }
               },
               "examples": {
-                "Example 1": {
+                "Example 2": {
                   "value": {
                     "auth": {
                       "email": "test@admin.com",
@@ -1370,12 +1405,15 @@
                     "email": "pagosex@email.com",
                     "country": "CO",
                     "language": "ES",
-                    "currency": "COP",
+                    "currency": "ARS",
                     "status": true,
                     "seller": 9,
                     "reseller": 12,
                     "tenantId": 3,
-                    "micrositeTenantId": 1
+                    "micrositeTenantId": 1,
+                    "restUserGroupsSettings": [
+                      "update_grou"
+                    ]
                   }
                 }
               }
@@ -7346,8 +7384,7 @@
         "examples": [
           {
             "franchise": 2,
-            "acquirerBIN": 400900,
-            "merchantCode": 4644986
+            "acquirerBIN": 400900
           }
         ],
         "required": [
