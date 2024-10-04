@@ -692,7 +692,7 @@
                       "data": {
                         "id": 3,
                         "name": "cliente name",
-                        "email": "test4@email.com",
+                        "email": "test3@email.com",
                         "country": "CL",
                         "status": true,
                         "seller": 1,
@@ -700,12 +700,20 @@
                         "currency_id": 6,
                         "language_id": 1,
                         "tenant_id": 1,
-                        "microsite_tenant_id": 2,
-                        "deleted_at": null,
-                        "remember_token": null,
+                        "microsite_tenant_id": 12,
+                        "deleted_at": "string",
+                        "remember_token": "string",
+                        "subscrioptions": [
+                          {
+                            "id": 4,
+                            "franchise": 2,
+                            "acquirerBIN": 400900,
+                            "merchant_code": 166688,
+                            "version": 2
+                          }
+                        ],
                         "created_at": "2024-02-08T23:15:03.000000Z",
-                        "updated_at": "2024-02-08T23:15:03.000000Z",
-                        "bins": null
+                        "updated_at": "2024-02-08T23:15:03.000000Z"
                       }
                     }
                   }
@@ -1091,39 +1099,38 @@
                     "value": {
                       "status": {
                         "status": "OK",
-                        "reason": "RU",
+                        "reason": "RC",
                         "message": "The request has been processed successfully",
-                        "date": "2024-02-13T22:03:08+00:00"
+                        "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "id": 1,
-                      "name": "pagosexample",
-                      "email": "pagosex@email.com",
-                      "country": "CO",
-                      "seller": 9,
-                      "reseller": 12,
-                      "admin_id": 1,
-                      "currency_id": 6,
-                      "language_id": 1,
-                      "tenant_id": 1,
-                      "microsite_tenant_id": 1,
-                      "deleted_at": null,
-                      "remember_token": null,
-                      "created_at": "2024-02-08T15:48:32.000000Z",
-                      "updated_at": "2024-02-08T22:53:33.000000Z",
-                      "bins": [
-                        {
-                          "id": 1,
-                          "franchise": 1,
-                          "acquirer_bin": 400900,
-                          "version": 2
-                        },
-                        {
-                          "id": 2,
-                          "franchise": 1,
-                          "acquirer_bin": 541475,
-                          "version": 2
+                      "data": {
+                        "user": {
+                          "id": 3,
+                          "name": "cliente name",
+                          "email": "test3@email.com",
+                          "country": "CL",
+                          "status": true,
+                          "seller": 1,
+                          "reseller": 1,
+                          "currency_id": 6,
+                          "language_id": 1,
+                          "tenant_id": 1,
+                          "microsite_tenant_id": 12,
+                          "deleted_at": "string",
+                          "remember_token": "string",
+                          "subscrioptions": [
+                            {
+                              "id": 4,
+                              "franchise": 2,
+                              "acquirerBIN": 400900,
+                              "merchant_code": 166688,
+                              "version": 2
+                            }
+                          ],
+                          "created_at": "2024-02-08T23:15:03.000000Z",
+                          "updated_at": "2024-02-08T23:15:03.000000Z"
                         }
-                      ]
+                      }
                     }
                   }
                 }
@@ -1374,7 +1381,7 @@
                 }
               },
               "examples": {
-                "Example 2": {
+                "Example 1": {
                   "value": {
                     "auth": {
                       "email": "test@admin.com",
@@ -1391,7 +1398,7 @@
                     "tenantId": 3,
                     "micrositeTenantId": 1,
                     "restUserGroupsSettings": [
-                      "update_grou"
+                      "update_group"
                     ]
                   }
                 }
