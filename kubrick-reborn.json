@@ -4079,442 +4079,6 @@
         ],
         "description": "Endpoint para listar todos los tenants de rest con sus respectivos datos."
       },
-      "get - copy 2": {
-        "summary": "index-old",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "x-examples": {
-                    "Example 1": {
-                      "auth": {
-                        "email": "existing.admin@test.com",
-                        "password": "Password.test6"
-                      },
-                      "data": [
-                        {
-                          "id": 1,
-                          "name": "Test Tenant",
-                          "description": "Tenant perteneciente al cliente x",
-                          "baseUrlTest": "https://test-tenant.placetopay.com/",
-                          "baseUrlProd": "https://prod-tenant.placetopay.com/"
-                        }
-                      ]
-                    }
-                  },
-                  "properties": {
-                    "auth": {
-                      "$ref": "#/components/schemas/admin-auth"
-                    },
-                    "data": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "name": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          },
-                          "baseUrlTest": {
-                            "type": "string"
-                          },
-                          "baseUrlProd": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example 1": {
-                    "value": {
-                      "auth": {
-                        "email": "existing.admin@test.com",
-                        "password": "Password.test6"
-                      },
-                      "data": [
-                        {
-                          "id": 1,
-                          "name": "Test Tenant",
-                          "description": "Tenant perteneciente al cliente x",
-                          "baseUrlTest": "https://test-tenant.placetopay.com/",
-                          "baseUrlProd": "https://prod-tenant.placetopay.com/"
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "x-examples": {
-                    "Example 1": {
-                      "status": {
-                        "status": "FAILED",
-                        "reason": "BR",
-                        "message": "The auth field is required.",
-                        "date": "2024-02-15T22:15:54+00:00"
-                      }
-                    }
-                  },
-                  "properties": {
-                    "status": {
-                      "$ref": "#/components/schemas/status-ok"
-                    }
-                  }
-                },
-                "examples": {
-                  "Example 1": {
-                    "value": {
-                      "status": {
-                        "status": "FAILED",
-                        "reason": "BR",
-                        "message": "The auth field is required.",
-                        "date": "2024-02-15T22:15:54+00:00"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "status": {
-                      "$ref": "#/components/schemas/status-ok"
-                    }
-                  },
-                  "x-examples": {
-                    "Example 1": {
-                      "status": {
-                        "status": "FAILED",
-                        "reason": "FA",
-                        "message": "Failed authentication check your credentials",
-                        "date": "2024-02-15T22:12:38+00:00"
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example 1": {
-                    "value": {
-                      "status": {
-                        "status": "FAILED",
-                        "reason": "FA",
-                        "message": "Failed authentication check your credentials",
-                        "date": "2024-02-15T22:12:38+00:00"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "x-examples": {
-                    "Example 1": {
-                      "message": "Server Error"
-                    }
-                  },
-                  "properties": {
-                    "message": {
-                      "type": "string",
-                      "description": "El server error representa una intermitencia en el sistema, en este caso se debe comnunicar con un administrador."
-                    }
-                  }
-                },
-                "examples": {
-                  "Example 1": {
-                    "value": {
-                      "message": "Server Error"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-api-tenants",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "x-examples": {
-                  "Example 1": {
-                    "auth": {
-                      "email": "test@admin.com",
-                      "password": "Password.admin6"
-                    }
-                  }
-                },
-                "properties": {
-                  "auth": {
-                    "$ref": "#/components/schemas/admin-auth"
-                  }
-                }
-              },
-              "examples": {
-                "Example 1": {
-                  "value": {
-                    "auth": {
-                      "email": "test@admin.com",
-                      "password": "Password.admin6"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "Tenants"
-        ],
-        "description": "Endpoint para listar todos los tenants de rest con sus respectivos datos."
-      },
-      "get - copy": {
-        "summary": "index-old",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "x-examples": {
-                    "Example 1": {
-                      "auth": {
-                        "email": "existing.admin@test.com",
-                        "password": "Password.test6"
-                      },
-                      "data": [
-                        {
-                          "id": 1,
-                          "name": "Test Tenant",
-                          "description": "Tenant perteneciente al cliente x",
-                          "baseUrlTest": "https://test-tenant.placetopay.com/",
-                          "baseUrlProd": "https://prod-tenant.placetopay.com/"
-                        }
-                      ]
-                    }
-                  },
-                  "properties": {
-                    "auth": {
-                      "$ref": "#/components/schemas/admin-auth"
-                    },
-                    "data": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "name": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          },
-                          "baseUrlTest": {
-                            "type": "string"
-                          },
-                          "baseUrlProd": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example 1": {
-                    "value": {
-                      "auth": {
-                        "email": "existing.admin@test.com",
-                        "password": "Password.test6"
-                      },
-                      "data": [
-                        {
-                          "id": 1,
-                          "name": "Test Tenant",
-                          "description": "Tenant perteneciente al cliente x",
-                          "baseUrlTest": "https://test-tenant.placetopay.com/",
-                          "baseUrlProd": "https://prod-tenant.placetopay.com/"
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "x-examples": {
-                    "Example 1": {
-                      "status": {
-                        "status": "FAILED",
-                        "reason": "BR",
-                        "message": "The auth field is required.",
-                        "date": "2024-02-15T22:15:54+00:00"
-                      }
-                    }
-                  },
-                  "properties": {
-                    "status": {
-                      "$ref": "#/components/schemas/status-ok"
-                    }
-                  }
-                },
-                "examples": {
-                  "Example 1": {
-                    "value": {
-                      "status": {
-                        "status": "FAILED",
-                        "reason": "BR",
-                        "message": "The auth field is required.",
-                        "date": "2024-02-15T22:15:54+00:00"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "status": {
-                      "$ref": "#/components/schemas/status-ok"
-                    }
-                  },
-                  "x-examples": {
-                    "Example 1": {
-                      "status": {
-                        "status": "FAILED",
-                        "reason": "FA",
-                        "message": "Failed authentication check your credentials",
-                        "date": "2024-02-15T22:12:38+00:00"
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example 1": {
-                    "value": {
-                      "status": {
-                        "status": "FAILED",
-                        "reason": "FA",
-                        "message": "Failed authentication check your credentials",
-                        "date": "2024-02-15T22:12:38+00:00"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "x-examples": {
-                    "Example 1": {
-                      "message": "Server Error"
-                    }
-                  },
-                  "properties": {
-                    "message": {
-                      "type": "string",
-                      "description": "El server error representa una intermitencia en el sistema, en este caso se debe comnunicar con un administrador."
-                    }
-                  }
-                },
-                "examples": {
-                  "Example 1": {
-                    "value": {
-                      "message": "Server Error"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-api-tenants",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "x-examples": {
-                  "Example 1": {
-                    "auth": {
-                      "email": "test@admin.com",
-                      "password": "Password.admin6"
-                    }
-                  }
-                },
-                "properties": {
-                  "auth": {
-                    "$ref": "#/components/schemas/admin-auth"
-                  }
-                }
-              },
-              "examples": {
-                "Example 1": {
-                  "value": {
-                    "auth": {
-                      "email": "test@admin.com",
-                      "password": "Password.admin6"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "Tenants"
-        ],
-        "description": "Endpoint para listar todos los tenants de rest con sus respectivos datos."
-      },
       "post": {
         "summary": "Crear tenant",
         "tags": [
@@ -4583,18 +4147,18 @@
                     "value": {
                       "status": {
                         "status": "OK",
-                        "reason": "RS",
+                        "reason": "RC",
                         "message": "The request has been processed successfully",
-                        "date": "2024-02-15T22:02:14+00:00"
+                        "date": "2024-02-08T23:15:08+00:00"
                       },
                       "data": {
-                        "name": "Tenant de prueba",
-                        "description": "Descripción de tenant de prueba",
-                        "base_url_test": "https://test-tenant.com",
-                        "base_url_prod": "https://prod-tenant.com",
-                        "updated_at": "2024-02-15T22:02:14.000000Z",
-                        "created_at": "2024-02-15T22:02:14.000000Z",
-                        "id": 4
+                        "name": "string",
+                        "description": "string",
+                        "base_url_test": "string",
+                        "base_url_prod": "string",
+                        "updated_at": "string",
+                        "created_at": "string",
+                        "id": 0
                       }
                     }
                   }
@@ -4796,12 +4360,9 @@
                     },
                     "name": "Test Tenant",
                     "description": "Tenant perteneciente al cliente x",
-                    "baseUrlTest": "https://test-tenant.placetopay.com/",
-                    "testLogin": "jio32484jdbcxmmz34j2",
-                    "testSecretKey": "sjdljbn33221",
-                    "baseUrlProd": "https://prod-tenant.placetopay.com/",
-                    "prodLogin": "ojij55243nqpisxm546c0",
-                    "prodSecretKey": "kojj554n85q"
+                    "baseUrl": "https://test-tenant.placetopay.com/",
+                    "login": "jio32484jdbcxmmz34j2",
+                    "secretKey": "sjdljbn33221"
                   }
                 }
               }
@@ -6238,14 +5799,11 @@
                       "email": "test@admin.com",
                       "password": "Password.admin6"
                     },
-                    "name": "CHpay Microsite tenant",
+                    "name": "Microsite tenant name",
                     "description": "Microsite Tenant de CHpay",
-                    "baseUrlProd": "https://chpay.cl/microsite",
-                    "prodLogin": "myProdLogin",
-                    "prodSecretKey": "myprodSecretHash",
-                    "baseUrlTest": "https://test.chpay.cl/rest/core",
-                    "testLogin": "myTestLogin",
-                    "testSecretKey": "myTestSecretHash"
+                    "baseUrl": "https://microsite-tenant.com/microsite",
+                    "login": "po1ewm25ssd7",
+                    "secretKey": "wdjwid"
                   }
                 }
               }
@@ -7119,7 +6677,8 @@
                       "description": "El server error representa una intermitencia en el sistema, en este caso se debe comnunicar con un administrador."
                     }
                   }
-                }
+                },
+                "examples": {}
               }
             }
           }
@@ -7180,15 +6739,9 @@
                       }
                     },
                     "data": {
-                      "type": "array",
+                      "$ref": "#/components/schemas/binResponseLong",
                       "x-stoplight": {
                         "id": "wwnlu4xo5mlha"
-                      },
-                      "items": {
-                        "$ref": "#/components/schemas/binResponseLong",
-                        "x-stoplight": {
-                          "id": "dqyky9xiz31q5"
-                        }
                       }
                     }
                   }
@@ -7310,6 +6863,99 @@
         "x-stoplight": {
           "id": "041qu5l0edejw"
         }
+      },
+      "binResponseLong": {
+        "title": "Bin Response Full",
+        "x-stoplight": {
+          "id": "o28ca7ie5xovl"
+        },
+        "type": "object",
+        "description": "Es la respuesta con la informacion completa de un bin",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "ID de la franquicia",
+            "example": 3
+          },
+          "franchise": {
+            "type": "integer",
+            "example": 2,
+            "description": "Código de la franquicia"
+          },
+          "acquirerBIN": {
+            "type": "number",
+            "description": "Bin del adquirente",
+            "example": 400900
+          },
+          "version": {
+            "type": "integer",
+            "default": 2,
+            "example": 2,
+            "description": "Versión del protocolo"
+          },
+          "three_ds_id": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "4vadlh8jpmbzg"
+            },
+            "example": null,
+            "description": "id del modelo 3ds relacionado"
+          },
+          "user_id": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "b1kbserc6yrjf"
+            },
+            "example": 12,
+            "description": "Id del usuario relacionado"
+          },
+          "created_at": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "1onit4uq3lsid"
+            },
+            "example": "2024-02-08T15:48:32.000000Z",
+            "description": "Fecha de creación"
+          },
+          "updated_at": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "uifavr4j0j3rf"
+            },
+            "example": "2024-02-08T15:48:32.000000Z",
+            "description": "Fecha de ultima actualización"
+          },
+          "deleted_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "6xv1j7y42xi0l"
+            },
+            "example": null,
+            "description": "fecha de eliminación"
+          }
+        },
+        "examples": [
+          {
+            "id": 3,
+            "franchise": 2,
+            "acquirerBIN": 400900,
+            "version": 2,
+            "three_ds_id": null,
+            "user_id": 12,
+            "created_at": "2024-02-08T15:48:32.000000Z",
+            "updated_at": "2024-02-08T15:48:32.000000Z",
+            "deleted_at": null
+          }
+        ]
       },
       "status-ok": {
         "title": "status",
@@ -8300,24 +7946,12 @@
         },
         "type": "object",
         "description": "Objeto para crear una configuración de un tenant de micrositios",
-        "examples": [
-          {
-            "name": "CHpay tenant",
-            "description": "Tenant de CHpay ",
-            "baseUrlProd": "https://chpay.cl/rest/core",
-            "prodLogin": "myProdLogin",
-            "prodSecretKey": "myprodSecretHash",
-            "baseUrlTest": "https://test.chpay.cl/rest/core",
-            "testLogin": "myTestLogin",
-            "testSecretKey": "myTestSecretHash"
-          }
-        ],
         "required": [
           "name",
           "description",
-          "baseUrlProd",
-          "prodLogin",
-          "prodSecretKey"
+          "baseUrl",
+          "login",
+          "secretKey"
         ],
         "properties": {
           "name": {
@@ -8337,7 +7971,7 @@
             "minLength": 3,
             "maxLength": 255
           },
-          "baseUrlProd": {
+          "baseUrl": {
             "type": "string",
             "x-stoplight": {
               "id": "ndmlfgt2au99h"
@@ -8347,7 +7981,7 @@
             "maxLength": 255,
             "minLength": 13
           },
-          "prodLogin": {
+          "login": {
             "type": "string",
             "x-stoplight": {
               "id": "i9sq6mnpbx3nt"
@@ -8357,7 +7991,7 @@
             "maxLength": 255,
             "minLength": 2
           },
-          "prodSecretKey": {
+          "secretKey": {
             "type": "string",
             "x-stoplight": {
               "id": "qp5hpgl20osai"
@@ -8366,38 +8000,17 @@
             "example": "myprodSecretHash",
             "minLength": 2,
             "maxLength": 255
-          },
-          "baseUrlTest": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "zox46he74ukk4"
-            },
-            "description": "Url del tenant de micrositio de test ligado al tenant rest de test de en donde se crearan los micrositios en test,es requerido si el Objeto micrositeTenant y en el esta testLogin o testSecretKey estan en la request, Es importante que la url brindada tenga una relación correcta con el tenant de rest de test brindado, ya que los sitios creados, por crear o existentes deben estar en dicho tenant de rest",
-            "example": "https://test.chpay.cl/rest/core",
-            "minLength": 13,
-            "maxLength": 255
-          },
-          "testLogin": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "r3b5uwaytrnbh"
-            },
-            "description": "testLogin del micrositeTenant de test para crear las solicitudes de micrositios en test, es requerido si el Objeto micrositeTenant y en el esta baseUrlTest o testSecretKey estan en la request",
-            "example": "myTestLogin",
-            "minLength": 2,
-            "maxLength": 255
-          },
-          "testSecretKey": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "lptixadh1cguc"
-            },
-            "description": "Secretkey del micrositeTenant de test para crear las solicitudes de micrositios en test, es requerido si el Objeto micrositeTenant y en el esta baseUrlTest o testSecretKey estan en la request",
-            "example": "myTestSecretHash",
-            "minLength": 2,
-            "maxLength": 255
           }
-        }
+        },
+        "examples": [
+          {
+            "name": "CHpay Microsite tenant",
+            "description": "Microsite Tenant de CHpay  ",
+            "baseUrl": "https://chpay.cl/microsite",
+            "login": "myProdLogin",
+            "secretKey": "myprodSecretHash"
+          }
+        ]
       },
       "micrositeTenantResponse": {
         "title": "micrositeTenant",
@@ -8429,47 +8042,35 @@
             "minLength": 3,
             "maxLength": 255
           },
-          "baseUrlProd": {
+          "baseUrl": {
             "type": "string",
-            "description": "Url de producción del tenant de micrositio ligado a rest de en donde se crearan los micrositios en producción",
+            "description": "Url de producción del tenant de micrositio ligado a rest de en donde se crearan los micrositios",
             "example": "https://chpay.cl/microsite",
             "maxLength": 255,
-            "minLength": 13
+            "minLength": 13,
+            "x-stoplight": {
+              "id": "jdqygsodz5e4k"
+            }
           },
-          "prodSecretKey": {
+          "secretKey": {
             "type": "string",
-            "description": "Secretkey del micrositeTenant de producción para crear las solicitudes de micrositios en producción",
+            "description": "Secretkey del micrositeTenant",
             "example": "myprodSecretHash",
             "minLength": 2,
-            "maxLength": 255
+            "maxLength": 255,
+            "x-stoplight": {
+              "id": "7g3w40bxmbipd"
+            }
           },
-          "prodLogin": {
+          "login": {
             "type": "string",
-            "description": "Login del micrositeTenant de produción de rest para crear las solicitudes de micrositios en producción",
+            "description": "Login del micrositeTenant ",
             "example": "myProdLogin",
             "maxLength": 255,
-            "minLength": 2
-          },
-          "baseUrlTest": {
-            "type": "string",
-            "description": "Url del tenant de micrositio de test ",
-            "example": "https://test.chpay.cl/rest/core",
-            "minLength": 13,
-            "maxLength": 255
-          },
-          "testLogin": {
-            "type": "string",
-            "description": "testLogin del micrositeTenant de test para crear las solicitudes de micrositios en test",
-            "example": "myTestLogin",
             "minLength": 2,
-            "maxLength": 255
-          },
-          "testSecretKey": {
-            "type": "string",
-            "description": "Secretkey del micrositeTenant de test para crear las solicitudes de micrositios en test",
-            "example": "myTestSecretHash",
-            "minLength": 2,
-            "maxLength": 255
+            "x-stoplight": {
+              "id": "j5l35qh8repsj"
+            }
           },
           "deleted_at": {
             "type": [
