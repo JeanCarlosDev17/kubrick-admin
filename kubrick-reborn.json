@@ -343,15 +343,14 @@
                     "description": "Objeto para crear una configuración de un tenant de rest, es requerido si no se ha brindado un tenanrId"
                   },
                   "micrositeTenantId": {
-                    "type": "integer",
+                    "$ref": "#/components/schemas/micrositeTenant",
                     "x-stoplight": {
                       "id": "mckwi6ks9m2ow"
                     },
-                    "description": "Id de la configuración del tenant de micrositios, es necesario si el cliente requiere crear micrositios brindar un micrositeTenantId o el objeto micrositeTenant ",
-                    "example": 1
+                    "description": "Id de la configuración del tenant de micrositios, es necesario si el cliente requiere crear micrositios brindar un micrositeTenantId o el objeto micrositeTenant "
                   },
                   "micrositeTenant": {
-                    "$ref": "#/components/schemas/micrositeTenant",
+                    "$ref": "#/components/schemas/tenant",
                     "x-stoplight": {
                       "id": "1gmepcb8yizew"
                     },
