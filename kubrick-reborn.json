@@ -7631,9 +7631,6 @@
           },
           "description": {
             "type": "string",
-            "x-stoplight": {
-              "id": "8xpmlvi25uzwb"
-            },
             "example": "Tenant de CHpay ",
             "description": "Descripción del tenant de rest, es requerido si el Objeto tenant esta en la request",
             "minLength": 3,
@@ -7641,9 +7638,6 @@
           },
           "baseUrl": {
             "type": "string",
-            "x-stoplight": {
-              "id": "ndmlfgt2au99h"
-            },
             "description": "Url del tenant de rest de en donde se crearan los recursos en producción,es requerido si el Objeto tenant esta en la request",
             "example": "https://chpay.cl/rest/core",
             "minLength": 13,
@@ -7651,9 +7645,6 @@
           },
           "login": {
             "type": "string",
-            "x-stoplight": {
-              "id": "i9sq6mnpbx3nt"
-            },
             "description": "Login del tenant de produción de rest para crear las solicitudes de recursos en producción, es requerido si el Objeto tenant esta en la request",
             "example": "myProdLogin",
             "minLength": 2,
@@ -7661,9 +7652,6 @@
           },
           "secretKey": {
             "type": "string",
-            "x-stoplight": {
-              "id": "qp5hpgl20osai"
-            },
             "description": "Secretkey del tenant de rest para crear las solicitudes de recursos en producción, es requerido si el Objeto tenant esta en la request",
             "example": "myprodSecretHash",
             "minLength": 2,
