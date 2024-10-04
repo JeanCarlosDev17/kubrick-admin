@@ -6995,134 +6995,6 @@
           "id": "mrderuyt2f5bm"
         },
         "type": "object",
-        "properties": {
-          "id": {
-            "type": "number",
-            "x-stoplight": {
-              "id": "zhhz04n4gukg1"
-            },
-            "example": 3
-          },
-          "name": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "rrnrfnps7i4rd"
-            },
-            "example": "cliente name"
-          },
-          "email": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "ut7f5h6alnzvp"
-            },
-            "example": "test3@email.com"
-          },
-          "country": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "fe48z19x2c1es"
-            },
-            "example": "CL"
-          },
-          "status": {
-            "type": "boolean",
-            "x-stoplight": {
-              "id": "s7n55z1uzagwu"
-            }
-          },
-          "seller": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "alkibferc42u9"
-            },
-            "example": 1
-          },
-          "reseller": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "ioge8v0w0e855"
-            },
-            "example": 1
-          },
-          "currency_id": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "3alzt2ioop97n"
-            },
-            "example": 6
-          },
-          "language_id": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "hb4ehterbp246"
-            },
-            "example": 1
-          },
-          "tenant_id": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "4dln9608ofp40"
-            },
-            "example": 1
-          },
-          "microsite_tenant_id": {
-            "type": [
-              "integer",
-              "null"
-            ],
-            "x-stoplight": {
-              "id": "2syosux1ogyr2"
-            },
-            "example": 12
-          },
-          "deleted_at": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "x-stoplight": {
-              "id": "4goevmk8qdutl"
-            }
-          },
-          "remember_token": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "x-stoplight": {
-              "id": "wv1q8rmilj4ik"
-            }
-          },
-          "subscrioptions": {
-            "x-stoplight": {
-              "id": "m2c8ysk6i781f"
-            },
-            "type": [
-              "array",
-              "null"
-            ],
-            "items": {
-              "$ref": "#/components/schemas/subscrioptionResponseShort",
-              "x-stoplight": {
-                "id": "zss2tmq7xw6ui"
-              }
-            }
-          },
-          "created_at": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "zz7od36ab4khr"
-            },
-            "example": "2024-02-08T23:15:03.000000Z"
-          },
-          "updated_at": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "kulfya5niz3td"
-            },
-            "example": "2024-02-08T23:15:03.000000Z"
-          }
-        },
         "examples": [
           {
             "id": 3,
@@ -7150,7 +7022,151 @@
             "created_at": "2024-02-08T23:15:03.000000Z",
             "updated_at": "2024-02-08T23:15:03.000000Z"
           }
-        ]
+        ],
+        "properties": {
+          "id": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "zhhz04n4gukg1"
+            },
+            "example": 3,
+            "description": "id del cliente"
+          },
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "rrnrfnps7i4rd"
+            },
+            "example": "cliente name",
+            "description": "Nombre del cliente"
+          },
+          "email": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ut7f5h6alnzvp"
+            },
+            "example": "test3@email.com",
+            "description": "email del cliente"
+          },
+          "country": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "fe48z19x2c1es"
+            },
+            "example": "CL",
+            "description": "País del comercio (ISO 3166-1 alfa-2)"
+          },
+          "status": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "s7n55z1uzagwu"
+            },
+            "description": "Define el estatus del cliente"
+          },
+          "seller": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "alkibferc42u9"
+            },
+            "example": 1,
+            "description": "id Consultor comercial"
+          },
+          "reseller": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "ioge8v0w0e855"
+            },
+            "example": 1,
+            "description": "id Distribuidor"
+          },
+          "currency_id": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "3alzt2ioop97n"
+            },
+            "example": 6,
+            "description": "id de la moneda"
+          },
+          "language_id": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "hb4ehterbp246"
+            },
+            "example": 1,
+            "description": "id del lenguaje"
+          },
+          "tenant_id": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "4dln9608ofp40"
+            },
+            "example": 1,
+            "description": "id del tenant configurado"
+          },
+          "microsite_tenant_id": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "2syosux1ogyr2"
+            },
+            "example": 12,
+            "description": "id del micrositeTenant configurado"
+          },
+          "deleted_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "4goevmk8qdutl"
+            },
+            "description": "fecha de eliminacion    "
+          },
+          "remember_token": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "wv1q8rmilj4ik"
+            }
+          },
+          "subscrioptions": {
+            "x-stoplight": {
+              "id": "m2c8ysk6i781f"
+            },
+            "type": [
+              "array",
+              "null"
+            ],
+            "description": "subscripciones de bins configuradas",
+            "items": {
+              "$ref": "#/components/schemas/subscrioptionResponseShort",
+              "x-stoplight": {
+                "id": "zss2tmq7xw6ui"
+              }
+            }
+          },
+          "created_at": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "zz7od36ab4khr"
+            },
+            "example": "2024-02-08T23:15:03.000000Z",
+            "description": "fecha de creación"
+          },
+          "updated_at": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "kulfya5niz3td"
+            },
+            "example": "2024-02-08T23:15:03.000000Z",
+            "description": "fecha de ultima actualización"
+          }
+        },
+        "description": ""
       },
       "document": {
         "title": "document",
