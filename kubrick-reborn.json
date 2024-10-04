@@ -340,14 +340,15 @@
                     "description": "Objeto para crear una configuración de un tenant de rest, es requerido si no se ha brindado un tenanrId"
                   },
                   "micrositeTenantId": {
-                    "$ref": "#/components/schemas/micrositeTenant",
                     "x-stoplight": {
                       "id": "mckwi6ks9m2ow"
                     },
-                    "description": "Id de la configuración del tenant de micrositios, es necesario si el cliente requiere crear micrositios brindar un micrositeTenantId o el objeto micrositeTenant "
+                    "description": "Id de la configuración del tenant de micrositios, es necesario si el cliente requiere crear micrositios brindar un micrositeTenantId o el objeto micrositeTenant ",
+                    "type": "integer",
+                    "example": 20
                   },
                   "micrositeTenant": {
-                    "$ref": "#/components/schemas/tenant",
+                    "$ref": "#/components/schemas/micrositeTenant",
                     "x-stoplight": {
                       "id": "1gmepcb8yizew"
                     },
@@ -404,29 +405,17 @@
                     "tenant": {
                       "name": "CHpay tenant",
                       "description": "Tenant de CHpay ",
-                      "baseUrlProd": "https://chpay.cl/rest/core",
-                      "prodLogin": "myProdLogin",
-                      "prodSecretKey": "myprodSecretHash",
-                      "baseUrlTest": "https://test.chpay.cl/rest/core",
-                      "testLogin": "myTestLogin",
-                      "testSecretKey": "myTestSecretHash"
+                      "baseUrl": "https://chpay.cl/rest/core",
+                      "login": "myProdLogin",
+                      "secretKey": "myprodSecretHash"
                     },
-                    "micrositeTenantId": {
+                    "micrositeTenantId": 20,
+                    "micrositeTenant": {
                       "name": "CHpay Microsite tenant",
                       "description": "Microsite Tenant de CHpay  ",
                       "baseUrl": "https://chpay.cl/microsite",
                       "login": "myProdLogin",
                       "secretKey": "myprodSecretHash"
-                    },
-                    "micrositeTenant": {
-                      "name": "CHpay tenant",
-                      "description": "Tenant de CHpay ",
-                      "baseUrlProd": "https://chpay.cl/rest/core",
-                      "prodLogin": "myProdLogin",
-                      "prodSecretKey": "myprodSecretHash",
-                      "baseUrlTest": "https://test.chpay.cl/rest/core",
-                      "testLogin": "myTestLogin",
-                      "testSecretKey": "myTestSecretHash"
                     },
                     "subscriptions": [
                       {
@@ -7625,18 +7614,6 @@
         },
         "type": "object",
         "description": "Objeto para crear una configuración de un tenant de rest",
-        "examples": [
-          {
-            "name": "CHpay tenant",
-            "description": "Tenant de CHpay ",
-            "baseUrlProd": "https://chpay.cl/rest/core",
-            "prodLogin": "myProdLogin",
-            "prodSecretKey": "myprodSecretHash",
-            "baseUrlTest": "https://test.chpay.cl/rest/core",
-            "testLogin": "myTestLogin",
-            "testSecretKey": "myTestSecretHash"
-          }
-        ],
         "required": [
           "name",
           "description",
@@ -7692,7 +7669,16 @@
             "minLength": 2,
             "maxLength": 255
           }
-        }
+        },
+        "examples": [
+          {
+            "name": "CHpay tenant",
+            "description": "Tenant de CHpay ",
+            "baseUrl": "https://chpay.cl/rest/core",
+            "login": "myProdLogin",
+            "secretKey": "myprodSecretHash"
+          }
+        ]
       },
       "micrositeTenant": {
         "title": "micrositeTenant",
