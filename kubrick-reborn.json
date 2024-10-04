@@ -488,42 +488,30 @@
                       },
                       "data": [
                         {
-                          "id": 2,
-                          "name": "Acquirer",
-                          "email": "test5@email.com",
-                          "country": "CL",
-                          "status": true,
-                          "seller": 1,
-                          "reseller": 1,
-                          "admin_id": 1,
-                          "currency_id": 6,
-                          "language_id": 1,
-                          "tenant_id": 2,
-                          "microsite_tenant_id": 1,
-                          "deleted_at": null,
-                          "remember_token": null,
-                          "created_at": "2024-02-08T15:48:48.000000Z",
-                          "updated_at": "2024-02-08T15:48:48.000000Z",
-                          "bins": null
-                        },
-                        {
                           "id": 3,
-                          "name": "Acquirer3",
+                          "name": "cliente name",
                           "email": "test3@email.com",
                           "country": "CL",
                           "status": true,
                           "seller": 1,
                           "reseller": 1,
-                          "admin_id": 1,
                           "currency_id": 6,
                           "language_id": 1,
-                          "tenant_id": 3,
-                          "microsite_tenant_id": null,
-                          "deleted_at": null,
-                          "remember_token": null,
+                          "tenant_id": 1,
+                          "microsite_tenant_id": 12,
+                          "deleted_at": "string",
+                          "remember_token": "string",
+                          "subscrioptions": [
+                            {
+                              "id": 4,
+                              "franchise": 2,
+                              "acquirerBIN": 400900,
+                              "merchant_code": 166688,
+                              "version": 2
+                            }
+                          ],
                           "created_at": "2024-02-08T23:15:03.000000Z",
-                          "updated_at": "2024-02-08T23:15:03.000000Z",
-                          "bins": null
+                          "updated_at": "2024-02-08T23:15:03.000000Z"
                         }
                       ]
                     }
