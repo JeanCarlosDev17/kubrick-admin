@@ -7692,9 +7692,6 @@
           },
           "description": {
             "type": "string",
-            "x-stoplight": {
-              "id": "8xpmlvi25uzwb"
-            },
             "example": "Microsite Tenant de CHpay  ",
             "description": "La Descripción del tenant de micrositios, esta es requerida si el Objeto micrositeTenant esta en la request",
             "minLength": 3,
@@ -7702,9 +7699,6 @@
           },
           "baseUrl": {
             "type": "string",
-            "x-stoplight": {
-              "id": "ndmlfgt2au99h"
-            },
             "description": "Url de producción del tenant de micrositio ligado a rest de en donde se crearan los micrositios en producción,es requerido si el Objeto micrositeTenant esta en la request, Es importante que la url brindada tenga una relación correcta con el tenant de produccion de rest brindado, ya que los sitios creados, por crear o existentes deben estar en dicho tenant de rest",
             "example": "https://chpay.cl/microsite",
             "maxLength": 255,
@@ -7712,9 +7706,6 @@
           },
           "login": {
             "type": "string",
-            "x-stoplight": {
-              "id": "i9sq6mnpbx3nt"
-            },
             "description": "Login del micrositeTenant de produción de rest para crear las solicitudes de micrositios en producción, es requerido si el Objeto micrositeTenant esta en la request",
             "example": "myProdLogin",
             "maxLength": 255,
@@ -7722,9 +7713,6 @@
           },
           "secretKey": {
             "type": "string",
-            "x-stoplight": {
-              "id": "qp5hpgl20osai"
-            },
             "description": "Secretkey del micrositeTenant de producción para crear las solicitudes de micrositios en producción, es requerido si el Objeto micrositeTenant esta en la request",
             "example": "myprodSecretHash",
             "minLength": 2,
