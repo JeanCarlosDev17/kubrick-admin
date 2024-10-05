@@ -30,14 +30,7 @@
         "responses": {
           "201": {
             "description": "Created",
-            "headers": {
-              "Content-Type": {
-                "schema": {
-                  "type": "string"
-                },
-                "description": "application/json"
-              }
-            },
+            "headers": {},
             "content": {
               "application/json": {
                 "schema": {
@@ -83,45 +76,50 @@
                     "status": {
                       "$ref": "#/components/schemas/status-ok"
                     },
-                    "data": {
+                    "user": {
                       "type": "object",
+                      "x-stoplight": {
+                        "id": "6u2cqds7lpcoo"
+                      },
                       "properties": {
                         "user": {
                           "$ref": "#/components/schemas/user-response"
-                        },
-                        "token": {
-                          "type": "string",
-                          "example": "dsf24sd52"
                         }
                       }
+                    },
+                    "token": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "8nkimkv38jq7n"
+                      },
+                      "example": "dsf24sd52"
                     }
                   }
                 },
                 "examples": {
-                  "Example 1": {
+                  "Example 2": {
                     "value": {
                       "status": {
                         "status": "OK",
-                        "reason": "RS",
+                        "reason": "RC",
                         "message": "The request has been processed successfully",
-                        "date": "2024-02-13T22:03:08+00:00"
+                        "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "data": {
+                      "user": {
                         "user": {
+                          "id": 3,
+                          "name": "cliente name",
+                          "email": "test3@email.com",
+                          "country": "CL",
                           "status": true,
-                          "name": "pagosexample",
-                          "email": "pagosex@email.com",
-                          "country": "CO",
-                          "seller": 9,
-                          "reseller": 12,
-                          "admin_id": 1,
-                          "currency_id": 8,
+                          "seller": 1,
+                          "reseller": 1,
+                          "currency_id": 6,
                           "language_id": 1,
-                          "tenant_id": 6,
-                          "microsite_tenant_id": 5,
-                          "updated_at": "2024-02-13T22:03:09.000000Z",
-                          "created_at": "2024-02-13T22:03:09.000000Z",
-                          "id": 6,
+                          "tenant_id": 1,
+                          "microsite_tenant_id": 12,
+                          "deleted_at": "string",
+                          "remember_token": "string",
                           "subscrioptions": [
                             {
                               "id": 4,
@@ -130,10 +128,12 @@
                               "merchant_code": 166688,
                               "version": 2
                             }
-                          ]
-                        },
-                        "token": "eyJ0eXAiOiJKV1WQiOiIxIiwianRpIjoiNWE1YWFkNWU2NzVhN2NiYTVhOTMwZjIzMjQ3YTZkNWU4MjgwOTg1MzY3ZTI0N2M5NmQzZGQzZWY0ZmZhNmY1OTdkODI3YzQ2ZGY5Zjg4NzkiLCJpYXQiOjE3MDc4NjE3ODkuNjQxMjI0LCJuYmYiOjE3MDc4NjE3ODkuNjQxMjM1LCJleHAiOjE3Mzk0ODQxODkuNTk0MTg0LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.nXO8Mxtnp5C3bMdckI4MFetGeZqz10UYhHRoN3C7TEybdl9GBPQ45f2J_fZzfocFumErug9BAhFHqdkaDIUzd-YJE_Z9Qax_pra5Oa_t5eY2bF8mvkPpBfItVglvgBgWRDvgr2Rq-Dgo97qqEa_3i226c0fKpSN4jjrsSUZLA__R5ASAgXIPUn-uUy1lFXKdn7nDfV7qGtXi3hiVUZH-nhWWHf0hPHguZ6y5Fm3xL44FBDbT_h-04WeLKnAY0fbGlwPzwB5nhrMaRBbiLxBOxFNIlp_uH52VfGJu8xm8971XEm9XckIG_SAdUmfRW0wcqYVc"
-                      }
+                          ],
+                          "created_at": "2024-02-08T23:15:03.000000Z",
+                          "updated_at": "2024-02-08T23:15:03.000000Z"
+                        }
+                      },
+                      "token": "dsf24sd52"
                     }
                   }
                 }
@@ -463,7 +463,7 @@
                         "id": "4giyey91prr82"
                       }
                     },
-                    "data": {
+                    "users": {
                       "type": "array",
                       "x-stoplight": {
                         "id": "09kqmubhcnucd"
@@ -672,7 +672,7 @@
                         "id": "fpqdg4sfs8tts"
                       }
                     },
-                    "data": {
+                    "user": {
                       "$ref": "#/components/schemas/user-response",
                       "x-stoplight": {
                         "id": "wk539n2non9ue"
@@ -1657,7 +1657,7 @@
                         "id": "n9j9bqsdgqn27"
                       }
                     },
-                    "data": {
+                    "subscription": {
                       "$ref": "#/components/schemas/binResponseLong",
                       "x-stoplight": {
                         "id": "zy1y5rg47aequ"
@@ -1670,17 +1670,19 @@
                     "value": {
                       "status": {
                         "status": "OK",
-                        "reason": "RC",
+                        "reason": "RU",
                         "message": "The request has been processed successfully",
                         "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "data": {
+                      "subscription": {
                         "id": 3,
-                        "franchise": 2,
+                        "franchise": "visa",
                         "acquirerBIN": 400900,
                         "version": 2,
+                        "merchant_code": 0,
                         "three_ds_id": null,
                         "user_id": 12,
+                        "branch_id": 0,
                         "created_at": "2024-02-08T15:48:32.000000Z",
                         "updated_at": "2024-02-08T15:48:32.000000Z",
                         "deleted_at": null
@@ -2128,7 +2130,7 @@
                         "id": "i1fver5ll9wen"
                       }
                     },
-                    "data": {
+                    "subscription": {
                       "$ref": "#/components/schemas/binResponseLong",
                       "x-stoplight": {
                         "id": "mgb6vt75ewcly"
@@ -2145,13 +2147,15 @@
                         "message": "The request has been processed successfully",
                         "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "data": {
+                      "subscription": {
                         "id": 3,
-                        "franchise": 2,
+                        "franchise": "visa",
                         "acquirerBIN": 400900,
                         "version": 2,
+                        "merchant_code": 0,
                         "three_ds_id": null,
                         "user_id": 12,
+                        "branch_id": 0,
                         "created_at": "2024-02-08T15:48:32.000000Z",
                         "updated_at": "2024-02-08T15:48:32.000000Z",
                         "deleted_at": null
@@ -2261,7 +2265,7 @@
                         "id": "fs4ihrp5swbtm"
                       }
                     },
-                    "data": {
+                    "subscription": {
                       "$ref": "#/components/schemas/binResponseLong",
                       "x-stoplight": {
                         "id": "755oypflffcgc"
@@ -2274,17 +2278,19 @@
                     "value": {
                       "status": {
                         "status": "OK",
-                        "reason": "RS",
+                        "reason": "RC",
                         "message": "The request has been processed successfully",
-                        "date": "2024-02-14T22:25:12+00:00"
+                        "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "data": {
+                      "subscription": {
                         "id": 3,
-                        "franchise": 2,
+                        "franchise": "visa",
                         "acquirerBIN": 400900,
                         "version": 2,
+                        "merchant_code": 0,
                         "three_ds_id": null,
                         "user_id": 12,
+                        "branch_id": 0,
                         "created_at": "2024-02-08T15:48:32.000000Z",
                         "updated_at": "2024-02-08T15:48:32.000000Z",
                         "deleted_at": null
@@ -2479,8 +2485,11 @@
                     "status": {
                       "$ref": "#/components/schemas/status-ok"
                     },
-                    "data": {
+                    "admin": {
                       "type": "object",
+                      "x-stoplight": {
+                        "id": "qgmrtj6qoaev7"
+                      },
                       "properties": {
                         "status": {
                           "type": "boolean"
@@ -2512,18 +2521,18 @@
                     "value": {
                       "status": {
                         "status": "OK",
-                        "reason": "RS",
+                        "reason": "RC",
                         "message": "The request has been processed successfully",
-                        "date": "2024-02-08T15:57:12+00:00"
+                        "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "data": {
+                      "admin": {
                         "status": true,
-                        "name": "Elliot Alderson",
-                        "email": "elliot.alderson@test.com",
-                        "country": "CO",
-                        "updated_at": "2024-02-08T15:57:12.000000Z",
-                        "created_at": "2024-02-08T15:57:12.000000Z",
-                        "id": 2
+                        "name": "string",
+                        "email": "string",
+                        "country": "string",
+                        "updated_at": "string",
+                        "created_at": "string",
+                        "id": 0
                       }
                     }
                   }
@@ -2732,43 +2741,6 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {
-                    "status": {
-                      "$ref": "#/components/schemas/status-ok"
-                    },
-                    "data": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "name": {
-                            "type": "string"
-                          },
-                          "email": {
-                            "type": "string"
-                          },
-                          "country": {
-                            "type": "string"
-                          },
-                          "status": {
-                            "type": "integer"
-                          },
-                          "deleted_at": {
-                            "type": "null"
-                          },
-                          "created_at": {
-                            "type": "null"
-                          },
-                          "updated_at": {
-                            "type": "null"
-                          }
-                        }
-                      }
-                    }
-                  },
                   "x-examples": {
                     "Example 1": {
                       "status": {
@@ -2799,6 +2771,46 @@
                           "updated_at": null
                         }
                       ]
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "$ref": "#/components/schemas/status-ok"
+                    },
+                    "admins": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "x-stoplight": {
+                          "id": "4gb1hqc6ikxmx"
+                        },
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "email": {
+                            "type": "string"
+                          },
+                          "country": {
+                            "type": "string"
+                          },
+                          "status": {
+                            "type": "integer"
+                          },
+                          "deleted_at": {
+                            "type": "null"
+                          },
+                          "created_at": {
+                            "type": "null"
+                          },
+                          "updated_at": {
+                            "type": "null"
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -2985,8 +2997,11 @@
                     "status": {
                       "$ref": "#/components/schemas/status-ok"
                     },
-                    "data": {
+                    "admin": {
                       "type": "object",
+                      "x-stoplight": {
+                        "id": "bi8aain0lsvsg"
+                      },
                       "properties": {
                         "status": {
                           "type": "boolean",
@@ -3031,18 +3046,18 @@
                     "value": {
                       "status": {
                         "status": "OK",
-                        "reason": "RS",
+                        "reason": "RU",
                         "message": "The request has been processed successfully",
-                        "date": "2024-02-08T15:57:12+00:00"
+                        "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "data": {
-                        "status": false,
+                      "admin": {
+                        "status": true,
                         "name": "Elliot Alderson Updated",
                         "email": "elliot.alderson@test.com",
                         "country": "CR",
-                        "updated_at": "2024-02-08T15:57:12.000000Z",
+                        "updated_at": "2024-03-08T15:57:12.000000Z",
                         "created_at": "2024-02-08T15:57:12.000000Z",
-                        "id": 2
+                        "id": 6135
                       }
                     }
                   }
@@ -3488,12 +3503,35 @@
               "application/json": {
                 "schema": {
                   "type": "object",
+                  "x-examples": {
+                    "Example 1": {
+                      "status": {
+                        "status": "OK",
+                        "reason": "RC",
+                        "message": "The request has been processed successfully",
+                        "date": "2024-02-08T16:59:50+00:00"
+                      },
+                      "data": {
+                        "id": 1,
+                        "name": "Test Admin",
+                        "email": "admin@test.com",
+                        "country": "CO",
+                        "status": 1,
+                        "deleted_at": null,
+                        "created_at": null,
+                        "updated_at": null
+                      }
+                    }
+                  },
                   "properties": {
                     "status": {
                       "$ref": "#/components/schemas/status-ok"
                     },
-                    "data": {
+                    "admin": {
                       "type": "object",
+                      "x-stoplight": {
+                        "id": "swwtk7lo7gfyu"
+                      },
                       "properties": {
                         "id": {
                           "type": "integer"
@@ -3521,21 +3559,23 @@
                         }
                       }
                     }
-                  },
-                  "x-examples": {
-                    "Example 1": {
+                  }
+                },
+                "examples": {
+                  "Example 1": {
+                    "value": {
                       "status": {
                         "status": "OK",
                         "reason": "RC",
                         "message": "The request has been processed successfully",
-                        "date": "2024-02-08T16:59:50+00:00"
+                        "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "data": {
-                        "id": 1,
-                        "name": "Test Admin",
-                        "email": "admin@test.com",
-                        "country": "CO",
-                        "status": 1,
+                      "admin": {
+                        "id": 0,
+                        "name": "string",
+                        "email": "string",
+                        "country": "string",
+                        "status": 0,
                         "deleted_at": null,
                         "created_at": null,
                         "updated_at": null
@@ -3884,8 +3924,11 @@
                     "status": {
                       "$ref": "#/components/schemas/status-ok"
                     },
-                    "data": {
+                    "tenant": {
                       "type": "object",
+                      "x-stoplight": {
+                        "id": "akyru7h2n5s7m"
+                      },
                       "properties": {
                         "name": {
                           "type": "string"
@@ -3907,6 +3950,12 @@
                         },
                         "id": {
                           "type": "integer"
+                        },
+                        "baseUrl": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "z26laoqsj0tf3"
+                          }
                         }
                       }
                     }
@@ -3921,7 +3970,7 @@
                         "message": "The request has been processed successfully",
                         "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "data": {
+                      "tenant": {
                         "name": "string",
                         "description": "string",
                         "base_url_test": "string",
@@ -4458,8 +4507,11 @@
                     "status": {
                       "$ref": "#/components/schemas/status-ok"
                     },
-                    "data": {
+                    "tenant": {
                       "type": "object",
+                      "x-stoplight": {
+                        "id": "6j569pk2jdx18"
+                      },
                       "properties": {
                         "name": {
                           "type": "string"
@@ -4481,7 +4533,35 @@
                         },
                         "id": {
                           "type": "integer"
+                        },
+                        "baseUrl": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "0ixg2ffcfroou"
+                          }
                         }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example 1": {
+                    "value": {
+                      "status": {
+                        "status": "OK",
+                        "reason": "RC",
+                        "message": "The request has been processed successfully",
+                        "date": "2024-02-08T23:15:08+00:00"
+                      },
+                      "tenant": {
+                        "name": "string",
+                        "description": "string",
+                        "baseUrlTest": "string",
+                        "baseUrlProd": "string",
+                        "updated_at": "string",
+                        "created_at": "string",
+                        "id": 0,
+                        "baseUrl": "string"
                       }
                     }
                   }
@@ -4709,17 +4789,14 @@
                 "Example 1": {
                   "value": {
                     "auth": {
-                      "email": "existing.admin@test.com",
-                      "password": "Password.test6"
+                      "email": "test@admin.com",
+                      "password": "Password.admin6"
                     },
-                    "name": "Test Tenant Updated",
-                    "description": "Tenant perteneciente al cliente x actualizado",
-                    "baseUrlTest": "https://test-tenant-actualizado.placetopay.com/",
-                    "testLogin": "jio32484jdbcxmmz34j2-actualizado",
-                    "testSecretKey": "sjdljbn33221-actualizado",
-                    "baseUrlProd": "https://prod-tenant-actualizado.placetopay.com/",
-                    "prodLogin": "ojij55243nqpisxm546c0sjdljbn33221-actualizado",
-                    "prodSecretKey": "kojj554n85qsjdljbn33221-actualizado"
+                    "name": "updatyed name",
+                    "description": "actulizaando",
+                    "baseUrl": "https://tenant-url-updated.com",
+                    "login": "jy84trthdbcxxx884pqzz",
+                    "secretKey": "string"
                   }
                 }
               }
@@ -4971,7 +5048,7 @@
                         "id": "zbnji4u2ypfgr"
                       }
                     },
-                    "data": {
+                    "tenant": {
                       "type": "object",
                       "x-stoplight": {
                         "id": "8bdi0wd7jneqw"
@@ -5012,7 +5089,34 @@
                           "x-stoplight": {
                             "id": "vgj88ays5lica"
                           }
+                        },
+                        "baseUrl": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "elmzzpdn1v1p1"
+                          }
                         }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example 1": {
+                    "value": {
+                      "status": {
+                        "status": "OK",
+                        "reason": "RC",
+                        "message": "The request has been processed successfully",
+                        "date": "2024-02-08T23:15:08+00:00"
+                      },
+                      "tenant": {
+                        "name": "string",
+                        "description": "string",
+                        "baseUrlTest": "string",
+                        "baseUrlProd": "string",
+                        "updated_at": "string",
+                        "id": 0,
+                        "baseUrl": "string"
                       }
                     }
                   }
@@ -5141,7 +5245,7 @@
                         "id": "ex196p1fgq4wq"
                       }
                     },
-                    "data": {
+                    "micrositeTenants": {
                       "type": "array",
                       "x-stoplight": {
                         "id": "18qsrfbckvdse"
@@ -5164,7 +5268,7 @@
                         "message": "The request has been processed successfully",
                         "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "data": [
+                      "micrositeTenants": [
                         {
                           "id": 2,
                           "name": "CHpay Microsite tenant",
@@ -5354,7 +5458,7 @@
                         "id": "rhb0oy3af4wmj"
                       }
                     },
-                    "data": {
+                    "micrositeTenants": {
                       "$ref": "#/components/schemas/micrositeTenantResponse",
                       "x-stoplight": {
                         "id": "ifdr1xsq5xthj"
@@ -5371,7 +5475,7 @@
                         "message": "The request has been processed successfully",
                         "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "data": {
+                      "micrositeTenants": {
                         "id": 2,
                         "name": "CHpay Microsite tenant",
                         "description": "Microsite Tenant de CHpay  ",
@@ -6648,9 +6752,9 @@
             "example": 3
           },
           "franchise": {
-            "type": "integer",
-            "example": 2,
-            "description": "Código de la franquicia"
+            "type": "string",
+            "description": "Código de la franquicia",
+            "example": "visa"
           },
           "acquirerBIN": {
             "type": "number",
@@ -6662,6 +6766,15 @@
             "default": 2,
             "example": 2,
             "description": "Versión del protocolo"
+          },
+          "merchant_code": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "nr38xyasro4v8"
+            }
           },
           "three_ds_id": {
             "type": [
@@ -6684,6 +6797,15 @@
             },
             "example": 12,
             "description": "Id del usuario relacionado"
+          },
+          "branch_id": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "b7lceorpjgstv"
+            }
           },
           "created_at": {
             "type": "string",
@@ -6716,11 +6838,13 @@
         "examples": [
           {
             "id": 3,
-            "franchise": 2,
+            "franchise": "visa",
             "acquirerBIN": 400900,
             "version": 2,
+            "merchant_code": 0,
             "three_ds_id": null,
             "user_id": 12,
+            "branch_id": 0,
             "created_at": "2024-02-08T15:48:32.000000Z",
             "updated_at": "2024-02-08T15:48:32.000000Z",
             "deleted_at": null
@@ -6991,34 +7115,6 @@
           "id": "mrderuyt2f5bm"
         },
         "type": "object",
-        "examples": [
-          {
-            "id": 3,
-            "name": "cliente name",
-            "email": "test3@email.com",
-            "country": "CL",
-            "status": true,
-            "seller": 1,
-            "reseller": 1,
-            "currency_id": 6,
-            "language_id": 1,
-            "tenant_id": 1,
-            "microsite_tenant_id": 12,
-            "deleted_at": "string",
-            "remember_token": "string",
-            "subscrioptions": [
-              {
-                "id": 4,
-                "franchise": 2,
-                "acquirerBIN": 400900,
-                "merchant_code": 166688,
-                "version": 2
-              }
-            ],
-            "created_at": "2024-02-08T23:15:03.000000Z",
-            "updated_at": "2024-02-08T23:15:03.000000Z"
-          }
-        ],
         "properties": {
           "id": {
             "type": "number",
@@ -7120,13 +7216,20 @@
             },
             "description": "fecha de eliminacion    "
           },
-          "remember_token": {
+          "rest_user_groups_settings": {
             "type": [
-              "string",
+              "array",
               "null"
             ],
             "x-stoplight": {
-              "id": "wv1q8rmilj4ik"
+              "id": "4zu8n3bi7k9w8"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "hdra9v8aiawkn"
+              },
+              "type": "string",
+              "example": "group"
             }
           },
           "subscrioptions": {
@@ -7143,6 +7246,15 @@
               "x-stoplight": {
                 "id": "zss2tmq7xw6ui"
               }
+            }
+          },
+          "remember_token": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "wv1q8rmilj4ik"
             }
           },
           "created_at": {
@@ -7162,121 +7274,37 @@
             "description": "fecha de ultima actualización"
           }
         },
-        "description": ""
-      },
-      "document": {
-        "title": "document",
-        "x-stoplight": {
-          "id": "41vpftz4eettm"
-        },
-        "type": "object",
-        "required": [
-          "type",
-          "number"
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "uecer4gd1emcb"
-            },
-            "description": "Tipo de documento del comercio."
-          },
-          "number": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "yntddwcvkl2b8"
-            },
-            "description": "Documento del comercio.",
-            "maxLength": 20,
-            "example": "900299823-1"
+        "examples": [
+          {
+            "id": 3,
+            "name": "cliente name",
+            "email": "test3@email.com",
+            "country": "CL",
+            "status": true,
+            "seller": 1,
+            "reseller": 1,
+            "currency_id": 6,
+            "language_id": 1,
+            "tenant_id": 1,
+            "microsite_tenant_id": 12,
+            "deleted_at": "string",
+            "rest_user_groups_settings": [
+              "group"
+            ],
+            "subscrioptions": [
+              {
+                "id": 4,
+                "franchise": 2,
+                "acquirerBIN": 400900,
+                "merchant_code": 166688,
+                "version": 2
+              }
+            ],
+            "remember_token": "string",
+            "created_at": "2024-02-08T23:15:03.000000Z",
+            "updated_at": "2024-02-08T23:15:03.000000Z"
           }
-        }
-      },
-      "address": {
-        "title": "address",
-        "x-stoplight": {
-          "id": "52ud4rb8f2jgn"
-        },
-        "type": "object",
-        "required": [
-          "city",
-          "state",
-          "country"
-        ],
-        "properties": {
-          "city": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "ds0u6o8hrtvr8"
-            },
-            "example": "medellin",
-            "description": "Ciudad del comercio."
-          },
-          "state": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "art2gm7oushe6"
-            },
-            "example": 1,
-            "description": "Estado / departamento / provincia del comercio (ISO)."
-          },
-          "country": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "duk54nqr65n21"
-            },
-            "description": "País del comercio (ISO 3166-1 alfa-2).",
-            "example": "CO"
-          }
-        }
-      },
-      "legalRepresentative": {
-        "title": "legalRepresentative",
-        "x-stoplight": {
-          "id": "nesfzy39vxipd"
-        },
-        "type": "object",
-        "required": [
-          "documentType",
-          "document",
-          "name",
-          "surname"
-        ],
-        "properties": {
-          "documentType": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "y400bqhmbsn6v"
-            },
-            "example": "CC",
-            "description": "Tipo de documento del representante legal."
-          },
-          "document": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "9gnblb6chopcy"
-            },
-            "description": "Documento de identificación del representante legal.",
-            "example": "1037854200"
-          },
-          "name": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "8en3dwzxcx4xz"
-            },
-            "description": "Nombres del representante legal.",
-            "example": "Ricardo"
-          },
-          "surname": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "jezuvzc3i6707"
-            },
-            "example": "García",
-            "description": "Apellidos del representante legal."
-          }
-        }
+        ]
       },
       "subscriptions": {
         "type": "array",
