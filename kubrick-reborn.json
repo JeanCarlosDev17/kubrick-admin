@@ -692,7 +692,7 @@
                         "message": "The request has been processed successfully",
                         "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "data": {
+                      "user": {
                         "id": 3,
                         "name": "cliente name",
                         "email": "test3@email.com",
@@ -705,7 +705,9 @@
                         "tenant_id": 1,
                         "microsite_tenant_id": 12,
                         "deleted_at": "string",
-                        "remember_token": "string",
+                        "rest_user_groups_settings": [
+                          "group"
+                        ],
                         "subscrioptions": [
                           {
                             "id": 4,
@@ -715,6 +717,7 @@
                             "version": 2
                           }
                         ],
+                        "remember_token": "string",
                         "created_at": "2024-02-08T23:15:03.000000Z",
                         "updated_at": "2024-02-08T23:15:03.000000Z"
                       }
@@ -1087,8 +1090,11 @@
                     "status": {
                       "$ref": "#/components/schemas/status-ok"
                     },
-                    "data": {
+                    "user": {
                       "type": "object",
+                      "x-stoplight": {
+                        "id": "5ztrtbc7r6pfy"
+                      },
                       "properties": {
                         "user": {
                           "$ref": "#/components/schemas/user-response"
@@ -1106,7 +1112,7 @@
                         "message": "The request has been processed successfully",
                         "date": "2024-02-08T23:15:08+00:00"
                       },
-                      "data": {
+                      "user": {
                         "user": {
                           "id": 3,
                           "name": "cliente name",
@@ -1120,7 +1126,9 @@
                           "tenant_id": 1,
                           "microsite_tenant_id": 12,
                           "deleted_at": "string",
-                          "remember_token": "string",
+                          "rest_user_groups_settings": [
+                            "group"
+                          ],
                           "subscrioptions": [
                             {
                               "id": 4,
@@ -1130,6 +1138,7 @@
                               "version": 2
                             }
                           ],
+                          "remember_token": "string",
                           "created_at": "2024-02-08T23:15:03.000000Z",
                           "updated_at": "2024-02-08T23:15:03.000000Z"
                         }
