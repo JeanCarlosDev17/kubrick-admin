@@ -97,7 +97,7 @@
                   }
                 },
                 "examples": {
-                  "Example 2": {
+                  "Example 1": {
                     "value": {
                       "status": {
                         "status": "OK",
@@ -114,12 +114,14 @@
                           "status": true,
                           "seller": 1,
                           "reseller": 1,
-                          "currency_id": 6,
-                          "language_id": 1,
+                          "currency": "COP",
+                          "language": "ES",
                           "tenant_id": 1,
                           "microsite_tenant_id": 12,
                           "deleted_at": "string",
-                          "remember_token": "string",
+                          "rest_user_groups_settings": [
+                            "group"
+                          ],
                           "subscrioptions": [
                             {
                               "id": 4,
@@ -129,6 +131,7 @@
                               "version": 2
                             }
                           ],
+                          "remember_token": null,
                           "created_at": "2024-02-08T23:15:03.000000Z",
                           "updated_at": "2024-02-08T23:15:03.000000Z"
                         }
@@ -478,7 +481,7 @@
                   }
                 },
                 "examples": {
-                  "Example 1": {
+                  "Example 2": {
                     "value": {
                       "status": {
                         "status": "OK",
@@ -495,8 +498,8 @@
                           "status": true,
                           "seller": 1,
                           "reseller": 1,
-                          "currency_id": 6,
-                          "language_id": 1,
+                          "currency": "COP",
+                          "language": "ES",
                           "tenant_id": 1,
                           "microsite_tenant_id": 12,
                           "deleted_at": "string",
@@ -512,7 +515,7 @@
                               "version": 2
                             }
                           ],
-                          "remember_token": "string",
+                          "remember_token": null,
                           "created_at": "2024-02-08T23:15:03.000000Z",
                           "updated_at": "2024-02-08T23:15:03.000000Z"
                         }
@@ -684,7 +687,7 @@
                   }
                 },
                 "examples": {
-                  "Example 1": {
+                  "Example 2": {
                     "value": {
                       "status": {
                         "status": "OK",
@@ -700,8 +703,8 @@
                         "status": true,
                         "seller": 1,
                         "reseller": 1,
-                        "currency_id": 6,
-                        "language_id": 1,
+                        "currency": "COP",
+                        "language": "ES",
                         "tenant_id": 1,
                         "microsite_tenant_id": 12,
                         "deleted_at": "string",
@@ -717,7 +720,7 @@
                             "version": 2
                           }
                         ],
-                        "remember_token": "string",
+                        "remember_token": null,
                         "created_at": "2024-02-08T23:15:03.000000Z",
                         "updated_at": "2024-02-08T23:15:03.000000Z"
                       }
@@ -1104,11 +1107,11 @@
                   }
                 },
                 "examples": {
-                  "Example 1": {
+                  "Example 2": {
                     "value": {
                       "status": {
                         "status": "OK",
-                        "reason": "RU",
+                        "reason": "RC",
                         "message": "The request has been processed successfully",
                         "date": "2024-02-08T23:15:08+00:00"
                       },
@@ -1121,8 +1124,8 @@
                           "status": true,
                           "seller": 1,
                           "reseller": 1,
-                          "currency_id": 6,
-                          "language_id": 1,
+                          "currency": "COP",
+                          "language": "ES",
                           "tenant_id": 1,
                           "microsite_tenant_id": 12,
                           "deleted_at": "string",
@@ -1138,7 +1141,7 @@
                               "version": 2
                             }
                           ],
-                          "remember_token": "string",
+                          "remember_token": null,
                           "created_at": "2024-02-08T23:15:03.000000Z",
                           "updated_at": "2024-02-08T23:15:03.000000Z"
                         }
@@ -1456,7 +1459,7 @@
                   }
                 },
                 "examples": {
-                  "Example 2": {
+                  "Example 1": {
                     "value": {
                       "status": {
                         "status": "OK",
@@ -1472,12 +1475,14 @@
                         "status": true,
                         "seller": 1,
                         "reseller": 1,
-                        "currency_id": 6,
-                        "language_id": 1,
+                        "currency": "COP",
+                        "language": "ES",
                         "tenant_id": 1,
                         "microsite_tenant_id": 12,
                         "deleted_at": "string",
-                        "remember_token": "string",
+                        "rest_user_groups_settings": [
+                          "group"
+                        ],
                         "subscrioptions": [
                           {
                             "id": 4,
@@ -1487,6 +1492,7 @@
                             "version": 2
                           }
                         ],
+                        "remember_token": null,
                         "created_at": "2024-02-08T23:15:03.000000Z",
                         "updated_at": "2024-02-08T23:15:03.000000Z"
                       },
@@ -7171,6 +7177,37 @@
           "id": "mrderuyt2f5bm"
         },
         "type": "object",
+        "examples": [
+          {
+            "id": 3,
+            "name": "cliente name",
+            "email": "test3@email.com",
+            "country": "CL",
+            "status": true,
+            "seller": 1,
+            "reseller": 1,
+            "currency": "COP",
+            "language": "ES",
+            "tenant_id": 1,
+            "microsite_tenant_id": 12,
+            "deleted_at": "string",
+            "rest_user_groups_settings": [
+              "group"
+            ],
+            "subscrioptions": [
+              {
+                "id": 4,
+                "franchise": 2,
+                "acquirerBIN": 400900,
+                "merchant_code": 166688,
+                "version": 2
+              }
+            ],
+            "remember_token": null,
+            "created_at": "2024-02-08T23:15:03.000000Z",
+            "updated_at": "2024-02-08T23:15:03.000000Z"
+          }
+        ],
         "properties": {
           "id": {
             "type": "number",
@@ -7227,21 +7264,21 @@
             "example": 1,
             "description": "id Distribuidor"
           },
-          "currency_id": {
-            "type": "integer",
+          "currency": {
+            "type": "string",
             "x-stoplight": {
               "id": "3alzt2ioop97n"
             },
-            "example": 6,
-            "description": "id de la moneda"
+            "example": "COP",
+            "description": "Moneda principal en formato ISO 4217 "
           },
-          "language_id": {
-            "type": "integer",
+          "language": {
+            "type": "string",
             "x-stoplight": {
               "id": "hb4ehterbp246"
             },
-            "example": 1,
-            "description": "id del lenguaje"
+            "example": "ES",
+            "description": "iso del lenguaje del cliente"
           },
           "tenant_id": {
             "type": "integer",
@@ -7329,38 +7366,7 @@
             "example": "2024-02-08T23:15:03.000000Z",
             "description": "fecha de ultima actualización"
           }
-        },
-        "examples": [
-          {
-            "id": 3,
-            "name": "cliente name",
-            "email": "test3@email.com",
-            "country": "CL",
-            "status": true,
-            "seller": 1,
-            "reseller": 1,
-            "currency_id": 6,
-            "language_id": 1,
-            "tenant_id": 1,
-            "microsite_tenant_id": 12,
-            "deleted_at": "string",
-            "rest_user_groups_settings": [
-              "group"
-            ],
-            "subscrioptions": [
-              {
-                "id": 4,
-                "franchise": 2,
-                "acquirerBIN": 400900,
-                "merchant_code": 166688,
-                "version": 2
-              }
-            ],
-            "remember_token": "string",
-            "created_at": "2024-02-08T23:15:03.000000Z",
-            "updated_at": "2024-02-08T23:15:03.000000Z"
-          }
-        ]
+        }
       },
       "subscriptions": {
         "type": "array",
