@@ -131,6 +131,7 @@
                               "version": 2
                             }
                           ],
+                          "is_super_user": false,
                           "remember_token": null,
                           "created_at": "2024-02-08T23:15:03.000000Z",
                           "updated_at": "2024-02-08T23:15:03.000000Z"
@@ -386,6 +387,14 @@
                       "maxLength": 100,
                       "example": "userGroupClient"
                     }
+                  },
+                  "isSuperUser": {
+                    "type": "boolean",
+                    "x-stoplight": {
+                      "id": "rcen746x47sys"
+                    },
+                    "default": false,
+                    "description": "Define si un cliente api tiene un nivel de acceso superior a ciertos servicios"
                   }
                 }
               },
@@ -515,6 +524,7 @@
                               "version": 2
                             }
                           ],
+                          "is_super_user": false,
                           "remember_token": null,
                           "created_at": "2024-02-08T23:15:03.000000Z",
                           "updated_at": "2024-02-08T23:15:03.000000Z"
@@ -720,6 +730,7 @@
                             "version": 2
                           }
                         ],
+                        "is_super_user": false,
                         "remember_token": null,
                         "created_at": "2024-02-08T23:15:03.000000Z",
                         "updated_at": "2024-02-08T23:15:03.000000Z"
@@ -1141,6 +1152,7 @@
                               "version": 2
                             }
                           ],
+                          "is_super_user": true,
                           "remember_token": null,
                           "created_at": "2024-02-08T23:15:03.000000Z",
                           "updated_at": "2024-02-08T23:15:03.000000Z"
@@ -1392,6 +1404,13 @@
                       "type": "string",
                       "example": "update_group"
                     }
+                  },
+                  "isSuperUser": {
+                    "type": "boolean",
+                    "x-stoplight": {
+                      "id": "q3k3rzduaus9j"
+                    },
+                    "description": "Define si un cliente api tiene un nivel de acceso superior a ciertos servicios"
                   }
                 }
               },
@@ -1414,7 +1433,8 @@
                     "micrositeTenantId": 1,
                     "restUserGroupsSettings": [
                       "update_group"
-                    ]
+                    ],
+                    "isSuperUser": true
                   }
                 }
               }
@@ -7203,6 +7223,7 @@
                 "version": 2
               }
             ],
+            "is_super_user": false,
             "remember_token": null,
             "created_at": "2024-02-08T23:15:03.000000Z",
             "updated_at": "2024-02-08T23:15:03.000000Z"
@@ -7339,6 +7360,12 @@
               "x-stoplight": {
                 "id": "zss2tmq7xw6ui"
               }
+            }
+          },
+          "is_super_user": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "qx3oj7fdb4vcc"
             }
           },
           "remember_token": {
