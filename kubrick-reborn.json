@@ -7004,7 +7004,7 @@
         "description": "Petición con la data requerida para crear la configuración de una suscriptcion a un bin ",
         "examples": [
           {
-            "franchise": 2,
+            "franchise": "visa",
             "acquirerBIN": 400900
           }
         ],
@@ -7014,11 +7014,11 @@
         ],
         "properties": {
           "franchise": {
-            "type": "integer",
+            "type": "string",
             "x-stoplight": {
               "id": "fm8iem1boy54t"
             },
-            "example": 2,
+            "example": "visa",
             "description": "Código de la franquicia"
           },
           "acquirerBIN": {
