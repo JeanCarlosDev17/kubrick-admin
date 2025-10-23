@@ -77,14 +77,9 @@
                       "$ref": "#/components/schemas/status-ok"
                     },
                     "user": {
-                      "type": "object",
+                      "$ref": "#/components/schemas/user-response",
                       "x-stoplight": {
                         "id": "6u2cqds7lpcoo"
-                      },
-                      "properties": {
-                        "user": {
-                          "$ref": "#/components/schemas/user-response"
-                        }
                       }
                     },
                     "token": {
@@ -106,36 +101,34 @@
                         "date": "2024-02-08T23:15:08+00:00"
                       },
                       "user": {
-                        "user": {
-                          "id": 3,
-                          "name": "cliente name",
-                          "email": "test3@email.com",
-                          "country": "CL",
-                          "status": true,
-                          "seller": 1,
-                          "reseller": 1,
-                          "currency": "COP",
-                          "language": "ES",
-                          "tenant_id": 1,
-                          "microsite_tenant_id": 12,
-                          "deleted_at": "string",
-                          "rest_user_groups_settings": [
-                            "group"
-                          ],
-                          "subscrioptions": [
-                            {
-                              "id": 4,
-                              "franchise": 2,
-                              "acquirerBIN": 400900,
-                              "merchant_code": 166688,
-                              "version": 2
-                            }
-                          ],
-                          "is_super_user": false,
-                          "remember_token": null,
-                          "created_at": "2024-02-08T23:15:03.000000Z",
-                          "updated_at": "2024-02-08T23:15:03.000000Z"
-                        }
+                        "id": 3,
+                        "name": "cliente name",
+                        "email": "test3@email.com",
+                        "country": "CL",
+                        "status": true,
+                        "seller": 1,
+                        "reseller": 1,
+                        "currency": "COP",
+                        "language": "ES",
+                        "tenant_id": 1,
+                        "microsite_tenant_id": 12,
+                        "deleted_at": "string",
+                        "rest_user_groups_settings": [
+                          "group"
+                        ],
+                        "subscrioptions": [
+                          {
+                            "id": 4,
+                            "franchise": "visa",
+                            "acquirerBIN": 400900,
+                            "merchant_code": 166688,
+                            "version": 2
+                          }
+                        ],
+                        "is_super_user": false,
+                        "remember_token": null,
+                        "created_at": "2024-02-08T23:15:03.000000Z",
+                        "updated_at": "2024-02-08T23:15:03.000000Z"
                       },
                       "token": "dsf24sd52"
                     }
@@ -431,7 +424,7 @@
                     },
                     "subscriptions": [
                       {
-                        "franchise": 2,
+                        "franchise": "visa",
                         "acquirerBIN": 400900
                       }
                     ],
@@ -518,7 +511,7 @@
                           "subscrioptions": [
                             {
                               "id": 4,
-                              "franchise": 2,
+                              "franchise": "visa",
                               "acquirerBIN": 400900,
                               "merchant_code": 166688,
                               "version": 2
@@ -724,7 +717,7 @@
                         "subscrioptions": [
                           {
                             "id": 4,
-                            "franchise": 2,
+                            "franchise": "visa",
                             "acquirerBIN": 400900,
                             "merchant_code": 166688,
                             "version": 2
@@ -1146,7 +1139,7 @@
                           "subscrioptions": [
                             {
                               "id": 4,
-                              "franchise": 2,
+                              "franchise": "visa",
                               "acquirerBIN": 400900,
                               "merchant_code": 166688,
                               "version": 2
@@ -1898,12 +1891,12 @@
                     }
                   },
                   "franchise": {
-                    "type": "integer",
+                    "type": "string",
                     "x-stoplight": {
                       "id": "sz5ovrl3fgety"
                     },
-                    "example": 1,
-                    "description": "ID de la franquicia"
+                    "description": "ID de la franquicia",
+                    "example": "visa"
                   },
                   "acquirerBIN": {
                     "type": "number",
@@ -2461,7 +2454,7 @@
                       "id": "expwlq9619ixf"
                     },
                     "description": "Código de la franquicia",
-                    "example": "1"
+                    "example": "visa"
                   },
                   "acquirerBIN": {
                     "type": "number",
@@ -2472,12 +2465,25 @@
                     "description": "Bin del adquirente"
                   },
                   "userId": {
-                    "type": "string",
+                    "type": "integer",
                     "x-stoplight": {
                       "id": "e8mmf3t8cu0gm"
                     },
                     "description": "Id del usuario a relacionar",
                     "example": "12"
+                  }
+                }
+              },
+              "examples": {
+                "Example 1": {
+                  "value": {
+                    "auth": {
+                      "email": "test@admin.com",
+                      "password": "Password.admin6"
+                    },
+                    "franchise": "visa",
+                    "acquirerBIN": 409700,
+                    "userId": 12
                   }
                 }
               }
@@ -7038,6 +7044,15 @@
         },
         "type": "object",
         "description": "Es la data minimizada de los bines usada en la respuestas de los clientes",
+        "examples": [
+          {
+            "id": 4,
+            "franchise": "visa",
+            "acquirerBIN": 400900,
+            "merchant_code": 166688,
+            "version": 2
+          }
+        ],
         "required": [
           "franchise",
           "acquirerBIN",
@@ -7053,9 +7068,9 @@
             "example": 4
           },
           "franchise": {
-            "type": "integer",
-            "example": 2,
-            "description": "Código de la franquicia"
+            "type": "string",
+            "description": "Código de la franquicia",
+            "example": "visa"
           },
           "acquirerBIN": {
             "type": "number",
@@ -7078,16 +7093,7 @@
             "default": 2,
             "example": 2
           }
-        },
-        "examples": [
-          {
-            "id": 4,
-            "franchise": 2,
-            "acquirerBIN": 400900,
-            "merchant_code": 166688,
-            "version": 2
-          }
-        ]
+        }
       },
       "subscrioptionResponseLong": {
         "title": "Subscrioption Response Full",
@@ -7096,6 +7102,20 @@
         },
         "type": "object",
         "description": "Es la respuesta con la informacion completa de un bin",
+        "examples": [
+          {
+            "id": 3,
+            "franchise": "visa",
+            "acquirerBIN": 400900,
+            "merchantCode": 166688,
+            "version": 2,
+            "three_ds_id": null,
+            "user_id": 12,
+            "created_at": "2024-02-08T15:48:32.000000Z",
+            "updated_at": "2024-02-08T15:48:32.000000Z",
+            "deleted_at": null
+          }
+        ],
         "properties": {
           "id": {
             "type": "integer",
@@ -7103,8 +7123,8 @@
             "example": 3
           },
           "franchise": {
-            "type": "integer",
-            "example": 2,
+            "type": "string",
+            "example": "visa",
             "description": "Código de la franquicia"
           },
           "acquirerBIN": {
@@ -7175,21 +7195,7 @@
             "example": null,
             "description": "fecha de eliminación"
           }
-        },
-        "examples": [
-          {
-            "id": 3,
-            "franchise": 2,
-            "acquirerBIN": 400900,
-            "merchantCode": 166688,
-            "version": 2,
-            "three_ds_id": null,
-            "user_id": 12,
-            "created_at": "2024-02-08T15:48:32.000000Z",
-            "updated_at": "2024-02-08T15:48:32.000000Z",
-            "deleted_at": null
-          }
-        ]
+        }
       },
       "user-response": {
         "title": "user-response",
@@ -7217,7 +7223,7 @@
             "subscrioptions": [
               {
                 "id": 4,
-                "franchise": 2,
+                "franchise": "visa",
                 "acquirerBIN": 400900,
                 "merchant_code": 166688,
                 "version": 2
