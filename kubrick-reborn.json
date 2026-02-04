@@ -125,6 +125,10 @@
                             "version": 2
                           }
                         ],
+                        "rest_user_filter_roles": [
+                          1,
+                          2
+                        ],
                         "is_super_user": false,
                         "remember_token": null,
                         "created_at": "2024-02-08T23:15:03.000000Z",
@@ -381,6 +385,20 @@
                       "example": "userGroupClient"
                     }
                   },
+                  "restUserFilterRoles": {
+                    "type": "array",
+                    "x-stoplight": {
+                      "id": "5ge59dxyult89"
+                    },
+                    "description": "Lista de permisos acl de tipo roles los cuales el usuario puede tener acceso ",
+                    "items": {
+                      "x-stoplight": {
+                        "id": "i4uf3xxryd5el"
+                      },
+                      "type": "integer",
+                      "example": 1
+                    }
+                  },
                   "isSuperUser": {
                     "type": "boolean",
                     "x-stoplight": {
@@ -516,6 +534,10 @@
                               "merchant_code": 166688,
                               "version": 2
                             }
+                          ],
+                          "rest_user_filter_roles": [
+                            1,
+                            2
                           ],
                           "is_super_user": false,
                           "remember_token": null,
@@ -722,6 +744,10 @@
                             "merchant_code": 166688,
                             "version": 2
                           }
+                        ],
+                        "rest_user_filter_roles": [
+                          1,
+                          2
                         ],
                         "is_super_user": false,
                         "remember_token": null,
@@ -1145,6 +1171,10 @@
                               "version": 2
                             }
                           ],
+                          "rest_user_filter_roles": [
+                            11,
+                            21
+                          ],
                           "is_super_user": true,
                           "remember_token": null,
                           "created_at": "2024-02-08T23:15:03.000000Z",
@@ -1390,6 +1420,7 @@
                       "id": "mmil1vsfsfrrm"
                     },
                     "minItems": 1,
+                    "description": "Configuraciones de grupos utilizados que seran asignados a los usuarios en panel por parte del cliente api",
                     "items": {
                       "x-stoplight": {
                         "id": "6nfzvgzm9394b"
@@ -1404,6 +1435,21 @@
                       "id": "q3k3rzduaus9j"
                     },
                     "description": "Define si un cliente api tiene un nivel de acceso superior a ciertos servicios"
+                  },
+                  "restUserFilterRoles": {
+                    "type": "array",
+                    "x-stoplight": {
+                      "id": "i8z4os4ow5yl5"
+                    },
+                    "description": "Define si un cliente api tiene un nivel de acceso superior a ciertos servicios",
+                    "items": {
+                      "x-stoplight": {
+                        "id": "fq2xygk8qi1dn"
+                      },
+                      "type": "integer",
+                      "minimum": 0,
+                      "example": 21
+                    }
                   }
                 }
               },
