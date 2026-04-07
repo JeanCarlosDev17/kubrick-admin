@@ -7281,6 +7281,9 @@
             "updated_at": "2024-02-08T23:15:03.000000Z"
           }
         ],
+        "required": [
+          "currency"
+        ],
         "properties": {
           "id": {
             "type": "number",
@@ -7444,6 +7447,46 @@
             },
             "example": "2024-02-08T23:15:03.000000Z",
             "description": "fecha de ultima actualización"
+          },
+          "tenant_rest_url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "kt42m5axi4lk3"
+            },
+            "description": "URL base del tenant REST asociado al usuario"
+          },
+          "tenant_rest_description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "9mrge87q9hh41"
+            },
+            "description": "Descripción del tenant REST asociado al usuario"
+          },
+          "microsite_tenant_url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "98tvt24ujoxf0"
+            },
+            "description": "URL base del tenant de micrositios asociado al usuario"
+          },
+          "microsite_tenant_description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "x-stoplight": {
+              "id": "9fvnaf3xux3h5"
+            },
+            "description": "Descripción del tenant de micrositios asociado al usuario"
           }
         }
       },
