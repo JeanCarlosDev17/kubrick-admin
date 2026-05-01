@@ -121,7 +121,6 @@
                             "id": 4,
                             "franchise": "visa",
                             "acquirerBIN": 400900,
-                            "merchant_code": 166688,
                             "version": 2
                           }
                         ],
@@ -542,7 +541,11 @@
                           "is_super_user": false,
                           "remember_token": null,
                           "created_at": "2024-02-08T23:15:03.000000Z",
-                          "updated_at": "2024-02-08T23:15:03.000000Z"
+                          "updated_at": "2024-02-08T23:15:03.000000Z",
+                          "tenant_url": "https://api-test.placetopay.com/rest/core",
+                          "tenant_description": "Tenant test",
+                          "microsite_tenant_url": "https://sites-test.placetopay.com",
+                          "microsite_tenant_description": "Micrositios test"
                         }
                       ]
                     }
@@ -752,7 +755,11 @@
                         "is_super_user": false,
                         "remember_token": null,
                         "created_at": "2024-02-08T23:15:03.000000Z",
-                        "updated_at": "2024-02-08T23:15:03.000000Z"
+                        "updated_at": "2024-02-08T23:15:03.000000Z",
+                        "tenant_url": "https://api-test.placetopay.com/rest/core",
+                        "tenant_description": "Tenant test",
+                        "microsite_tenant_url": "https://sites-test.placetopay.com",
+                        "microsite_tenant_description": "Micrositios test"
                       }
                     }
                   }
@@ -1137,7 +1144,7 @@
                   }
                 },
                 "examples": {
-                  "Example 2": {
+                  "Example 1": {
                     "value": {
                       "status": {
                         "status": "OK",
@@ -1171,14 +1178,14 @@
                               "version": 2
                             }
                           ],
-                          "rest_user_filter_roles": [
-                            11,
-                            21
-                          ],
-                          "is_super_user": true,
+                          "is_super_user": false,
                           "remember_token": null,
                           "created_at": "2024-02-08T23:15:03.000000Z",
-                          "updated_at": "2024-02-08T23:15:03.000000Z"
+                          "updated_at": "2024-02-08T23:15:03.000000Z",
+                          "tenant_url": "https://api-test.placetopay.com/rest/core",
+                          "tenant_description": "Tenant test test latam",
+                          "microsite_tenant_url": "https://sites-test.placetopay.com",
+                          "microsite_tenant_description": "Micrositios test latam"
                         }
                       }
                     }
@@ -7153,7 +7160,7 @@
             "id": 3,
             "franchise": "visa",
             "acquirerBIN": 400900,
-            "merchantCode": 166688,
+            "merchantCode": null,
             "version": 2,
             "three_ds_id": null,
             "user_id": 12,
@@ -7179,7 +7186,10 @@
             "example": 400900
           },
           "merchantCode": {
-            "type": "number",
+            "type": [
+              "number",
+              "null"
+            ],
             "x-stoplight": {
               "id": "y56nkxf313p28"
             },
@@ -7278,7 +7288,11 @@
             "is_super_user": false,
             "remember_token": null,
             "created_at": "2024-02-08T23:15:03.000000Z",
-            "updated_at": "2024-02-08T23:15:03.000000Z"
+            "updated_at": "2024-02-08T23:15:03.000000Z",
+            "tenant_url": "https://api-test.placetopay.com/rest/core",
+            "tenant_description": "Tenant test test latam",
+            "microsite_tenant_url": "https://sites-test.placetopay.com",
+            "microsite_tenant_description": "Micrositios test latam"
           }
         ],
         "required": [
