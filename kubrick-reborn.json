@@ -2910,6 +2910,30 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "Example 1": {
+                    "value": {
+                      "status": {
+                        "status": "OK",
+                        "reason": "RC",
+                        "message": "The request has been processed successfully",
+                        "date": "2024-02-08T23:15:08+00:00"
+                      },
+                      "admins": [
+                        {
+                          "id": 1,
+                          "name": "Admin Name",
+                          "email": "admin@example.com",
+                          "country": "CO",
+                          "status": true,
+                          "deleted_at": null,
+                          "created_at": "2024-02-08T15:57:12.000000Z",
+                          "updated_at": "2024-02-08T15:57:12.000000Z"
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
